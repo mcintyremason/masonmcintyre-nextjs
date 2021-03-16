@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #58b2fd; /* Robin Blue: #58b2fd */
+  --secondary-color: #b5bad0; /* Silver Grey: #b5bad0 */
+  --border-primary: #000000;
+  --border-secondary: #ffffff;
+  --border-selected: #ff0000;
+  --border-matched: #00ff00;
+  --background-color: #ffffff;
+  --background-contrast: #0f0f0fe6;
+
+  --header-height: 105px;
+  --dark-mode-toggle-height: 38px;
+}

@@ -1,0 +1,26 @@
+.hide {
+  display: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

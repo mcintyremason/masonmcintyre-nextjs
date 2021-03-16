@@ -1,0 +1,57 @@
+.match-card-container {
+  perspective: 1000px;
+  padding: 5%;
+}
+
+.match-card-container .match-card {
+  position: relative;
+  border: 3px solid var(--border-primary);
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.match-card-container .match-card.dark {
+  border: 3px solid var(--border-secondary);
+}
+
+.match-card-container .match-card.large {
+  height: 12.5em;
+  width: 12.5em;
+}
+
+.match-card-container .match-card.medium {
+  height: 10em;
+  width: 10em;
+}
+
+.match-card-container .match-card.small {
+  height: 9em;
+  width: 9em;
+}
+
+.match-card-container .match-card.selected {
+  border: 3px solid var(--border-selected);
+  transform: rotateY(0deg);
+}
+
+.match-card-container .match-card.matched {
+  border: 3px solid var(--border-matched);
+  transform: rotateY(0deg);
+}
+
+.match-card-container .front,
+.back {
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.match-card-container .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}

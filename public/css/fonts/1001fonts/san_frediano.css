@@ -1,0 +1,8 @@
+/* Webfont: BloggerSans */
+@font-face {
+  font-family: "San Frediano";
+  src: url("fonts/1001fonts/san_frediano_regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}

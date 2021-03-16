@@ -1,0 +1,51 @@
+.home-page-container {
+  height: 100%;
+  color: var(--primary-color);
+}
+
+.home-page-container.dark {
+  background-color: #000000;
+}
+
+.home-page-container.light {
+  background-color: #ffffff;
+}
+
+.home-page-container .title {
+  height: var(--header-height);
+}
+
+.home-page-container .game-container {
+  height: calc(100% - (var(--header-height) + var(--dark-mode-toggle-height)));
+  width: 100%;
+  padding: 0 0 20%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.game-container::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.game-container .easy {
+  width: 75%;
+}
+
+.game-container .medium {
+  width: 75%;
+}
+
+.game-container .hard {
+  width: 80%;
+}
+
+.game-container .menu {
+  height: 100%;
+}
+
+@media screen and (min-width: 996px) {
+  .home-page-container .game-container {
+    padding: 0;
+  }
+}

@@ -3,7 +3,7 @@ import React from "react";
 
 type FooterProps = {};
 
-const Footer: React.FC<FooterProps> = (props: FooterProps) => {
+const Footer: React.FC<FooterProps> = (_: FooterProps) => {
   return (
     <>
       <div id="footer" className="footer">

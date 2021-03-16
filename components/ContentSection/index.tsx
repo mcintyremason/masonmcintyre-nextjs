@@ -4,7 +4,7 @@ import React from "react";
 type ContentSectionProps = {};
 
 const ContentSection: React.FC<ContentSectionProps> = (
-  props: ContentSectionProps,
+  _: ContentSectionProps,
 ) => {
   return (
     <div className="main">

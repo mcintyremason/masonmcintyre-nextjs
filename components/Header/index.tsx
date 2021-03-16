@@ -1,22 +1,29 @@
-import React, { useState } from 'react'
-import { AppBar, Grid, Link } from '@material-ui/core'
-import classNames from 'classnames'
-import HamburgerNav from '../HamburgerNav'
+import React, { useState } from "react";
+import { AppBar, Grid, Link } from "@material-ui/core";
+import classNames from "classnames";
+import HamburgerNav from "../HamburgerNav";
 
-type HeaderProps = {}
+type HeaderProps = {};
 
-const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
-  const [hambugerActive, setHambugerActive] = useState(false)
+const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
+  const [hambugerActive, setHambugerActive] = useState(false);
 
   const hamburgerOnClick = () => {
-    setHambugerActive(!hambugerActive)
-  }
+    setHambugerActive(!hambugerActive);
+  };
 
   return (
     <AppBar position="fixed" className="app-bar">
       <Grid container direction="column" justify="center">
         <Grid container className="header">
-          <Grid container item xs={10} sm={6} direction="column" justify="center">
+          <Grid
+            container
+            item
+            xs={10}
+            sm={6}
+            direction="column"
+            justify="center"
+          >
             <h1 className="header-name">
               <Link itemProp="name" className="name" href="/">
                 <span itemProp="givenName">Mason</span>
@@ -32,9 +39,18 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
             justify="center"
             item
             xs={12}
-            className={classNames('menu-container', hambugerActive ? 'active' : '')}
+            className={classNames(
+              "menu-container",
+              hambugerActive ? "active" : "",
+            )}
           >
-            <Grid className="menu" container justify="center" direction="row" wrap="nowrap">
+            <Grid
+              className="menu"
+              container
+              justify="center"
+              direction="row"
+              wrap="nowrap"
+            >
               <Grid className="menu-link-container">
                 <Link className="menu-link" href="/resume">
                   Resume
@@ -51,7 +67,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
         </Grid>
       </Grid>
     </AppBar>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

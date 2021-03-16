@@ -1,10 +1,9 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import Canvas from "./DrawCanvas";
 import Shape from "./Shape";
 
 type DrawProps = {};
-const Draw: React.FC<DrawProps> = (props: DrawProps) => {
+const Draw: React.FC<DrawProps> = (_: DrawProps) => {
   const [backgroundColor, setBackgroundColor] = useState<string>("#ffffff");
   const [outlineColor, setOutlineColor] = useState<string>("#000000");
   const [fillColor, setFillColor] = useState<string>("#58b2fd");
@@ -14,7 +13,7 @@ const Draw: React.FC<DrawProps> = (props: DrawProps) => {
   const [outline, setOutline] = useState<boolean>(true);
   const [fill, setFill] = useState<boolean>(true);
   const [shapes, setShapes] = useState<Array<Shape>>([]);
-  const [reShapes, setReShapes] = useState<Array<Shape>>([]);
+  const [reShapes] = useState<Array<Shape>>([]);
   const [currentShape, setCurrentShape] = useState<Shape>(null);
   const [isForwardDisabled, setIsForwardDisabled] = useState<boolean>(true);
   const [isBackwardDisabled, setIsBackwardDisabled] = useState<boolean>(true);
@@ -81,51 +80,51 @@ const Draw: React.FC<DrawProps> = (props: DrawProps) => {
     setReDraw(true);
   };
 
-  const save = () => {
-    var saveName = prompt(
-      "Please enter the name of the file you wish to save.",
-      "default",
-    );
-    let saveString = "";
-    const shapeProps = new Array();
-    for (var i = 0; i < shapes.length; i++) {
-      shapes[i].properties =
-        shapes[i].firstX +
-        shapes[i].delim +
-        shapes[i].firstY +
-        shapes[i].delim +
-        shapes[i].x +
-        shapes[i].delim +
-        shapes[i].y +
-        shapes[i].delim +
-        shapes[i].outlineColor +
-        shapes[i].delim +
-        shapes[i].fillColor +
-        shapes[i].delim +
-        shapes[i].outline +
-        shapes[i].delim +
-        shapes[i].fill +
-        shapes[i].delim +
-        shapes[i].shapeType +
-        shapes[i].delim +
-        shapes[i].centerX +
-        shapes[i].delim +
-        shapes[i].centerY +
-        shapes[i].delim +
-        shapes[i].text;
-      shapeProps.push(shapes[i].properties);
-    }
-    for (var i = 0; i < shapeProps.length; i++) {
-      saveString += "!" + shapeProps[i];
-    }
+  // const save = () => {
+  //   var saveName = prompt(
+  //     "Please enter the name of the file you wish to save.",
+  //     "default",
+  //   );
+  //   let saveString = "";
+  //   const shapeProps = new Array();
+  //   for (var i = 0; i < shapes.length; i++) {
+  //     shapes[i].properties =
+  //       shapes[i].firstX +
+  //       shapes[i].delim +
+  //       shapes[i].firstY +
+  //       shapes[i].delim +
+  //       shapes[i].x +
+  //       shapes[i].delim +
+  //       shapes[i].y +
+  //       shapes[i].delim +
+  //       shapes[i].outlineColor +
+  //       shapes[i].delim +
+  //       shapes[i].fillColor +
+  //       shapes[i].delim +
+  //       shapes[i].outline +
+  //       shapes[i].delim +
+  //       shapes[i].fill +
+  //       shapes[i].delim +
+  //       shapes[i].shapeType +
+  //       shapes[i].delim +
+  //       shapes[i].centerX +
+  //       shapes[i].delim +
+  //       shapes[i].centerY +
+  //       shapes[i].delim +
+  //       shapes[i].text;
+  //     shapeProps.push(shapes[i].properties);
+  //   }
+  //   for (var i = 0; i < shapeProps.length; i++) {
+  //     saveString += "!" + shapeProps[i];
+  //   }
 
-    localStorage.setItem(saveName, saveString);
-  };
+  //   localStorage.setItem(saveName, saveString);
+  // };
 
-  const load = () => {
-    setIsLoading(true);
-    setReDraw(true);
-  };
+  // const load = () => {
+  //   setIsLoading(true);
+  //   setReDraw(true);
+  // };
 
   return (
     <div className="drawContainer">

@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
-type ProjectsProps = {}
+type ProjectsProps = {};
 
-const Projects: React.FC<ProjectsProps> = (props: ProjectsProps) => {
+const Projects: React.FC<ProjectsProps> = (_: ProjectsProps) => {
   return (
     <div className="main">
       <div className="projects-container">
@@ -25,7 +25,7 @@ const Projects: React.FC<ProjectsProps> = (props: ProjectsProps) => {
         </h4>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

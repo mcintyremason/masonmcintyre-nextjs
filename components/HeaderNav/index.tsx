@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 type HeaderNavProps = {};
 
-const HeaderNav: React.FC<HeaderNavProps> = (props: HeaderNavProps) => {
+const HeaderNav: React.FC<HeaderNavProps> = (_: HeaderNavProps) => {
   const [isHamburgerActive, setIsHamburgerActive] = useState(false);
 
   const hamburgerOnClick = () => {

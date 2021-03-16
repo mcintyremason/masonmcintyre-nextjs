@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AppBar, Grid, Link } from "@material-ui/core";
 import classNames from "classnames";
 import HamburgerNav from "../HamburgerNav";
+import styles from "./index.module.css";
 
 type HeaderProps = {};
 
@@ -13,7 +14,7 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
   };
 
   return (
-    <AppBar position="fixed" className="app-bar">
+    <AppBar position="fixed" className={styles["app-bar"]}>
       <Grid container direction="column" justify="center">
         <Grid container className="header">
           <Grid

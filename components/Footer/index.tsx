@@ -1,12 +1,25 @@
+import { Grid } from "@material-ui/core";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import styles from "./index.module.css";
+import classNames from "classnames";
 
-type FooterProps = {};
+type FooterProps = {
+  isAbsolute?: boolean;
+};
 
-const Footer: React.FC<FooterProps> = (_: FooterProps) => {
+const Footer: React.FC<FooterProps> = (props: FooterProps) => {
+  const { isAbsolute } = props;
+
   return (
     <>
-      <div id="footer" className="footer">
+      <Grid
+        id="footer"
+        className={classNames(
+          styles["footer"],
+          isAbsolute ? styles["absolute"] : "",
+        )}
+      >
         <meta
           itemProp="sameAs"
           content="http://www.gowilkesu.com/roster.aspx?rp_id=4947"
@@ -15,34 +28,47 @@ const Footer: React.FC<FooterProps> = (_: FooterProps) => {
           itemProp="sameAs"
           content="http://www.huskers.com/ViewArticle.dbml?DB_OEM_ID=100&ATCLID=205267310"
         />
-        <div className="footer-icons">
-          <h4 itemProp="email" className="footer-email">
+        <Grid
+          container
+          className={classNames(styles["footer-icons"], styles["menu"])}
+        >
+          <h4 itemProp="email" className={styles["footer-email"]}>
             <Link href="mailto:mason@masonmcintyre.com">
-              <i className="fa fa-envelope-o" aria-hidden="true"></i>
+              <a>
+                <i className="fa fa-envelope-o" aria-hidden="true"></i>
+              </a>
             </Link>
           </h4>
-          <h4 itemProp="telephone" className="footer-phone">
+          <h4 itemProp="telephone" className={styles["footer-phone"]}>
             <Link href="tel:6104289142">
-              <i className="fa fa-phone" aria-hidden="true"></i>
+              <a>
+                <i className={"fa fa-phone"} aria-hidden="true"></i>
+              </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
             <Link href="skype:o0xpopeyex0o">
-              <i className="fa fa-skype" aria-hidden="true"></i>
+              <a>
+                <i className={"fa fa-skype"} aria-hidden="true"></i>
+              </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
             <Link href="https://www.linkedin.com/in/mason-mcintyre-a68ab1b2">
-              <i className="fa fa-linkedin" aria-hidden="true"></i>
+              <a>
+                <i className={"fa fa-linkedin"} aria-hidden="true"></i>
+              </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
             <Link href="https://github.com/mcintyremason">
-              <i className="fa fa-github" aria-hidden="true"></i>
+              <a>
+                <i className={"fa fa-github"} aria-hidden="true"></i>
+              </a>
             </Link>
           </h4>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
 
       <script
         async

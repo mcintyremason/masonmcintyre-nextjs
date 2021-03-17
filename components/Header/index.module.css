@@ -1,6 +1,6 @@
 header.app-bar {
   min-height: var(--mobile-header-height);
-  padding: 2% 2%;
+  padding: 12px;
   background-color: var(--background-secondary);
   color: var(--primary-color);
   transition: min-height 0.5s;
@@ -59,6 +59,7 @@ header.app-bar {
   border-bottom: 2px solid var(--background-primary);
   text-decoration: none;
 }
+
 .menu .menu-link-divider {
   padding-top: 4px;
   line-height: 1.1em;
@@ -67,7 +68,7 @@ header.app-bar {
 
 @media only screen and (min-width: 769px) {
   header.app-bar {
-    padding: 0 2%;
+    padding: 0 12px;
   }
 
   .header {

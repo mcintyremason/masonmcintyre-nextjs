@@ -3,7 +3,7 @@ header.app-bar {
   padding: 2% 2%;
   background-color: var(--background-secondary);
   color: var(--primary-color);
-  transition: all 0.5s;
+  transition: min-height 0.5s;
 }
 
 .header {

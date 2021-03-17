@@ -24,12 +24,12 @@ const ContentSection: React.FC<ContentSectionProps> = (
           </Link>
           . I develop & maintain React applications written in TypeScript, REST
           servers using Scala, & initiated/lead monthly education sessions that
-          encourage other team members to showcase technologies along with best
-          practices. When I'm not in the office I'm either hanging out with my
-          daughter Jane Mae, my dog Luna, friends & family, or am on some type
-          of adventure! My passions include reading, working out, & traveling;
-          from hiking up mountains (like Mt. Marcy), to exploring foreign cities
-          (such as Berlin).
+          promote collaboration as well as encourage other team members to
+          showcase topics they find interesting. When I'm not in the office I'm
+          either hanging out with my daughter Jane Mae, my dog Luna, friends &
+          family, or am on some type of adventure! My passions include reading,
+          working out, & traveling; from hiking up mountains (like Mt. Marcy),
+          to exploring foreign cities (such as Berlin).
         </p>
         <p>
           If you're interested in seeing some of the work I've done over the

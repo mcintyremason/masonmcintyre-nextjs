@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./index.module.css";
 import classNames from "classnames";
 

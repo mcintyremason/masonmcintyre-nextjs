@@ -55,7 +55,18 @@
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    width: 100%;
+    bottom: 0;
+  }
+
   .footer .footer-icons {
     max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer {
+    position: absolute;
   }
 }

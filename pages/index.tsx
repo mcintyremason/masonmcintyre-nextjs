@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import Layout from '../components/Layout'
-import Header from '../components/Header'
-import ContentSection from '../components/ContentSection'
-import Footer from '../components/Footer'
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import ContentSection from "../components/ContentSection";
+import Footer from "../components/Footer";
 
 const IndexPage = () => (
   <Layout title="Mason McIntyre">
@@ -15,6 +15,6 @@ const IndexPage = () => (
       </div>
     </div>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

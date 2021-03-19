@@ -1,6 +1,6 @@
 header.app-bar {
   min-height: var(--mobile-header-height);
-  padding: 12px;
+  padding: 2% 2%;
   background-color: var(--background-secondary);
   color: var(--primary-color);
   transition: min-height 0.5s;
@@ -33,6 +33,7 @@ header.app-bar {
   transition: all 0.5s;
   font-size: 1.3em;
   line-height: 1.3em;
+  overflow: hidden;
 }
 
 .header .menu-container.active {
@@ -43,6 +44,7 @@ header.app-bar {
 .header .menu {
   padding: 0;
   margin: 0;
+  font-size: 1em;
 }
 
 .menu .menu-link-container {
@@ -59,7 +61,6 @@ header.app-bar {
   border-bottom: 2px solid var(--background-primary);
   text-decoration: none;
 }
-
 .menu .menu-link-divider {
   padding-top: 4px;
   line-height: 1.1em;
@@ -68,7 +69,7 @@ header.app-bar {
 
 @media only screen and (min-width: 769px) {
   header.app-bar {
-    padding: 0 12px;
+    padding: 0 2%;
   }
 
   .header {
@@ -89,5 +90,6 @@ header.app-bar {
 
   .header .menu-container .menu {
     justify-content: flex-end;
+    font-size: 1.2em;
   }
 }

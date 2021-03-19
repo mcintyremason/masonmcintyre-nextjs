@@ -1,67 +1,69 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from "react";
 
-import { Grid } from '@material-ui/core'
+import { Grid } from "@material-ui/core";
 
-import MatchCard, { MatchCardProps } from '../MatchCard'
-import { GameContext } from '../HomePage'
-import Win from '../Win'
+import MatchCard, { MatchCardProps } from "../MatchCard";
+import { GameContext } from "../HomePage";
+import Win from "../Win";
 
 type GameProps = {
-  difficulty: number
-  resetCardsDelay: number
-  resetGameDelay: number
-  winDelay: number
-}
+  difficulty: number;
+  resetCardsDelay: number;
+  resetGameDelay: number;
+  winDelay: number;
+};
 
 const Game = (props: GameProps) => {
   const { cards, gameOver, setCards, setGameOver, setGameRunning } = useContext(
-    GameContext
-  )
-  const { difficulty, resetCardsDelay, resetGameDelay, winDelay } = props
+    GameContext,
+  );
+  const { difficulty, resetCardsDelay, resetGameDelay, winDelay } = props;
   const [
     selectedCardFirst,
     setSelectedCardFirst,
-  ] = useState<MatchCardProps | null>(null)
+  ] = useState<MatchCardProps | null>(null);
   const [
     selectedCardSecond,
     setSelectedCardSecond,
-  ] = useState<MatchCardProps | null>(null)
-  const [matchedCards, setMatchedCards] = useState<Array<String>>([])
-  const [resetingCards, setResetingCards] = useState<NodeJS.Timeout | number>(0)
+  ] = useState<MatchCardProps | null>(null);
+  const [matchedCards, setMatchedCards] = useState<Array<String>>([]);
+  const [resetingCards, setResetingCards] = useState<NodeJS.Timeout | number>(
+    0,
+  );
 
   const shuffleCards = () => {
-    const multiplier = difficulty === 0 ? 4 : difficulty === 1 ? 8 : 12
+    const multiplier = difficulty === 0 ? 4 : difficulty === 1 ? 8 : 12;
 
     setCards(
       cards.map((card) => ({
         ...card,
         matched: false,
         order: Math.floor(Math.random() * multiplier),
-      }))
-    )
-  }
+      })),
+    );
+  };
 
   const resetGame = (): boolean => {
     setTimeout(() => {
-      shuffleCards()
-      setSelectedCardFirst(null)
-      setSelectedCardSecond(null)
-      setMatchedCards([])
-      setGameRunning(false)
-      setGameOver(false)
-      setResetingCards(0)
-    }, resetGameDelay)
-    return true
-  }
+      shuffleCards();
+      setSelectedCardFirst(null);
+      setSelectedCardSecond(null);
+      setMatchedCards([]);
+      setGameRunning(false);
+      setGameOver(false);
+      setResetingCards(0);
+    }, resetGameDelay);
+    return true;
+  };
 
   const resetCards = () => {
-    setSelectedCardFirst(null)
-    setSelectedCardSecond(null)
-    setGameOver(false)
-  }
+    setSelectedCardFirst(null);
+    setSelectedCardSecond(null);
+    setGameOver(false);
+  };
 
   const autoResetCards = (): void => {
-    clearTimeout(resetingCards as number)
+    clearTimeout(resetingCards as number);
     setResetingCards(
       setTimeout(() => {
         if (
@@ -69,21 +71,21 @@ const Game = (props: GameProps) => {
           selectedCardSecond &&
           selectedCardFirst.value !== selectedCardSecond.value
         ) {
-          resetCards()
+          resetCards();
         }
-      }, resetCardsDelay)
-    )
-  }
+      }, resetCardsDelay),
+    );
+  };
 
   const checkForWin = () => {
     matchedCards.length === cards.length / 2
       ? setTimeout(() => {
-          setSelectedCardFirst(null)
-          setSelectedCardSecond(null)
-          setGameOver(resetGame())
+          setSelectedCardFirst(null);
+          setSelectedCardSecond(null);
+          setGameOver(resetGame());
         }, winDelay)
-      : resetCards()
-  }
+      : resetCards();
+  };
 
   const checkForMatch = () => {
     if (
@@ -91,39 +93,39 @@ const Game = (props: GameProps) => {
       selectedCardFirst.value === selectedCardSecond?.value
     ) {
       // if match add to list of matched cards & check for win
-      setMatchedCards([...matchedCards, selectedCardSecond.value])
-      return checkForWin()
+      setMatchedCards([...matchedCards, selectedCardSecond.value]);
+      return checkForWin();
     } else if (
       selectedCardFirst &&
       selectedCardFirst.value !== selectedCardSecond?.value
     ) {
       // else there's no match & the cards are flipped back over
-      autoResetCards()
-      return selectedCardSecond
+      autoResetCards();
+      return selectedCardSecond;
     }
-    return null
-  }
+    return null;
+  };
 
   const isMatched = (card: MatchCardProps): boolean =>
-    matchedCards.includes(card.value)
+    matchedCards.includes(card.value);
 
   const selectMatchCard = ({ card }: { card: MatchCardProps }) => {
     if (selectedCardFirst?.id === card.id) {
       // if first selected card is reselected
       // clear timeout before the cards auto reset
-      clearTimeout(resetingCards as number)
-      setSelectedCardFirst(selectedCardSecond)
-      setSelectedCardSecond(null)
+      clearTimeout(resetingCards as number);
+      setSelectedCardFirst(selectedCardSecond);
+      setSelectedCardSecond(null);
     } else if (selectedCardFirst === null && selectedCardSecond === null) {
       // if no cards are selected
-      setSelectedCardFirst(card)
+      setSelectedCardFirst(card);
     } else if (selectedCardFirst && selectedCardSecond?.id === card.id) {
       // if first card is selected, and second card is reselected
-      clearTimeout(resetingCards as number)
-      setSelectedCardSecond(null)
+      clearTimeout(resetingCards as number);
+      setSelectedCardSecond(null);
     } else if (selectedCardFirst && selectedCardSecond === null) {
       // if first card is selected, and second card is not selected
-      setSelectedCardSecond(card)
+      setSelectedCardSecond(card);
     } else if (
       selectedCardFirst &&
       selectedCardSecond &&
@@ -131,26 +133,26 @@ const Game = (props: GameProps) => {
     ) {
       // both cards are selected and a new first card is selected,
       // clear timeout before the cards auto reset
-      clearTimeout(resetingCards as number)
-      setSelectedCardFirst(card)
-      setSelectedCardSecond(null)
+      clearTimeout(resetingCards as number);
+      setSelectedCardFirst(card);
+      setSelectedCardSecond(null);
     }
-  }
+  };
 
   useEffect(() => {
-    checkForMatch()
-  }, [selectedCardSecond])
+    checkForMatch();
+  }, [selectedCardSecond]);
 
   useEffect(() => {
-    checkForWin()
-  }, [matchedCards])
+    checkForWin();
+  }, [matchedCards]);
 
   return gameOver ? (
     <Win />
   ) : (
     <div
       className={`${
-        difficulty === 0 ? 'easy' : difficulty === 1 ? 'medium' : 'hard'
+        difficulty === 0 ? "easy" : difficulty === 1 ? "medium" : "hard"
       }`}
     >
       <Grid container>
@@ -169,10 +171,10 @@ const Game = (props: GameProps) => {
                   ...card,
                   classes: `${
                     difficulty === 0
-                      ? 'large'
+                      ? "large"
                       : difficulty === 1
-                      ? 'medium'
-                      : 'small'
+                      ? "medium"
+                      : "small"
                   }`,
                   selected:
                     selectedCardFirst === card || selectedCardSecond === card,
@@ -186,7 +188,7 @@ const Game = (props: GameProps) => {
           ))}
       </Grid>
     </div>
-  )
-}
+  );
+};
 
-export default Game
+export default Game;

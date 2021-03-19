@@ -1,35 +1,38 @@
-import { Grid } from '@material-ui/core'
-import React from 'react'
-import classNames from 'classnames'
+import { Grid } from "@material-ui/core";
+import React from "react";
+import classNames from "classnames";
+import styles from "./index.module.css";
 
 type HamburgerNavProps = {
-  active: boolean
-  onClick: (event: any) => void
-}
+  active: boolean;
+  onClick: (event: any) => void;
+};
 
-const HamburgerNav: React.FC<HamburgerNavProps> = (props: HamburgerNavProps) => {
-  const { active, onClick } = props
+const HamburgerNav: React.FC<HamburgerNavProps> = (
+  props: HamburgerNavProps,
+) => {
+  const { active, onClick } = props;
 
   return (
-    <Grid container justify="flex-end" onClick={onClick} className="hamburger-container">
+    <Grid
+      container
+      justify="flex-end"
+      onClick={onClick}
+      className={styles["hamburger-container"]}
+    >
       <button
-        className={classNames('hamburger', 'hamburger--collapse', active ? 'is-active' : '')}
+        className={classNames(
+          styles["hamburger"],
+          styles["hamburger--collapse"],
+          active ? styles["is-active"] : "",
+        )}
         type="button"
       >
-        <span className="hamburger-box">
-          <span className="hamburger-inner"></span>
+        <span className={styles["hamburger-box"]}>
+          <span className={styles["hamburger-inner"]}></span>
         </span>
       </button>
     </Grid>
-    // <Grid onClick={onClick} className="hamburger-container">
-    //   <div
-    //     id="hamburger"
-    //     className={classNames('hamburger', active ? 'active' : '')}
-    //     onClick={onClick}
-    //   >
-    //     <div></div>
-    //   </div>
-    // </Grid>
-  )
-}
-export default HamburgerNav
+  );
+};
+export default HamburgerNav;

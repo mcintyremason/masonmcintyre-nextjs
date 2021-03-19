@@ -91,5 +91,6 @@ header.app-bar {
   .header .menu-container .menu {
     justify-content: flex-end;
     font-size: 1.2em;
+    line-height: 1.3em;
   }
 }

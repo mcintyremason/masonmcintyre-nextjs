@@ -182,127 +182,6 @@ h6 {
 .app .hide {
   display: none;
 }
-.app .header-container {
-  z-index: 999;
-  width: 100%;
-  height: 74px;
-  background-color: var(--background-secondary);
-  transition: all 0.5s;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-}
-.app .header-container.active {
-  height: 120px;
-}
-.app .header-container .header {
-  height: 100%;
-  margin: 0 4%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.app .header-container .header a {
-  color: var(--primary-color);
-  border-bottom: 3px solid;
-  border-color: transparent;
-  transition: all 0.5s;
-  text-decoration: none;
-}
-.app .header-container .header a:hover {
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-.app .header-container .header a:focus {
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-.app .header-container .header .header-name {
-  grid-area: header-name;
-  position: relative;
-}
-.app .header-container .header .header-name a {
-  border: none;
-  position: absolute;
-  top: 5px;
-  width: 192px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-.app .header-container .header .header-nav {
-  grid-area: header-nav;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-}
-.app .header-container .header .header-nav ul {
-  display: none;
-}
-.app .header-container .header .header-nav .hamburger {
-  margin: 0.4em 0;
-  width: 25px;
-  cursor: pointer;
-}
-.app .header-container .header .header-nav .hamburger:after,
-.app .header-container .header .header-nav .hamburger:before,
-.app .header-container .header .header-nav .hamburger div {
-  background-color: var(--primary-color);
-  border-radius: 3px;
-  content: "";
-  display: block;
-  height: 4px;
-  margin: 0 0 4px;
-  transition: all 0.2s ease-in-out;
-}
-.app .header-container .header .header-nav .hamburger.active:before {
-  transform: translateY(8px) rotate(135deg);
-}
-.app .header-container .header .header-nav .hamburger.active:after {
-  transform: translateY(-8px) rotate(-135deg);
-}
-.app .header-container .header .header-nav .hamburger.active div {
-  transform: scale(0);
-}
-.app .header-container .header .mobile-nav-container {
-  grid-area: mobile-header-nav;
-  height: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  transition: 0.5s all;
-  overflow: hidden;
-}
-.app .header-container .header .mobile-nav-container.active {
-  height: 45px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-}
-.app .header-container .header .mobile-nav-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.25s all;
-}
-.app .header-container .header .mobile-nav-container.active ul {
-  opacity: 1;
-}
-.app .header-container .header .mobile-nav-container ul li {
-  display: inline-block;
-  margin: 0 7px 0 0;
-}
-
-.app .header-container .header .mobile-nav-container ul li:last-child {
-  margin-right: 0;
-}
-.app .header-container .header .mobile-nav-container ul li span {
-  color: var(--primary-color);
-}
 .app .main {
   grid-area: main;
   display: grid;
@@ -968,10 +847,6 @@ h6 {
   transition: 0.5s;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
-}
-
-.match-card-container .match-card.dark {
-  border: 3px solid var(--border-secondary);
 }
 
 .match-card-container .match-card.large {

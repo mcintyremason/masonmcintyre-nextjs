@@ -12,6 +12,7 @@
   --desktop-header-height: 92px;
   --header-height: 100px;
   --dark-mode-toggle-height: 38px;
+  --footer-height: 65px;
 }
 
 /* Fonts */
@@ -824,7 +825,7 @@ h6 {
   }
   .app .main {
     height: calc(100% - 151px);
-    margin: var(--desktop-header-height) 0 0;
+    margin: var(--desktop-header-height) 0 var(--footer-height);
   }
   .app .main .objective-container {
     grid-template-columns: 175px 75px auto;

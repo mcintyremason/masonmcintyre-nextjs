@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AppBar, Grid, Link } from "@material-ui/core";
-import classNames from "classnames";
 import HamburgerNav from "../HamburgerNav";
+import classNames from "classnames";
 import styles from "./index.module.css";
 
 type HeaderProps = {};

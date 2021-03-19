@@ -14,9 +14,14 @@ type GameProps = {
 };
 
 const Game = (props: GameProps) => {
-  const { cards, gameOver, setCards, setGameOver, setGameRunning } = useContext(
-    GameContext,
-  );
+  const {
+    cards,
+    gameOver,
+    isDarkMode,
+    setCards,
+    setGameOver,
+    setGameRunning,
+  } = useContext(GameContext);
   const { difficulty, resetCardsDelay, resetGameDelay, winDelay } = props;
   const [
     selectedCardFirst,
@@ -148,7 +153,7 @@ const Game = (props: GameProps) => {
   }, [matchedCards]);
 
   return gameOver ? (
-    <Win />
+    <Win isDark={isDarkMode} />
   ) : (
     <div
       className={`${

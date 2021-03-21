@@ -29,6 +29,7 @@
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
+  font-display: swap;
 }
 /* Webfont: BloggerSans */
 @font-face {
@@ -37,6 +38,7 @@
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
+  font-display: swap;
 }
 
 /* Global Styles */

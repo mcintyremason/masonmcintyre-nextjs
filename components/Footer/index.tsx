@@ -32,10 +32,6 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
           itemProp="sameAs"
           content="https://www.instagram.com/mcintyremason/?hl=en"
         />
-        <meta
-          itemProp="sameAs"
-          content="https://www.linkedin.com/in/mason-mcintyre-a68ab1b2"
-        />
         <Grid
           container
           className={classNames(styles["footer-icons"], styles["menu"])}
@@ -82,19 +78,6 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
         async
         src="https://www.googletagmanager.com/gtag/js?id=UA-156934776-1"
       ></script>
-      {/* <script>
-  {() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(s: string, d: Date | string) {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "UA-156934776-1");
-  }}
-</script> */}
-      {/* <script type="text/javascript" src="/js/root/index.js"></script> */}
-      {/* <script type="text/javascript" src="/js/main/main.js"></script> */}
     </>
   );
 };

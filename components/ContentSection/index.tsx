@@ -12,6 +12,8 @@ const ContentSection: React.FC<ContentSectionProps> = (
         <img
           src="/img/20160720_Mt-Marcy-Stream-View_468x624.webp"
           alt="Mt. Marcy"
+          width="468"
+          height="624"
         />
       </div>
       <div className="about-container">

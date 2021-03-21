@@ -34,35 +34,35 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
         >
           <h4 itemProp="email" className={styles["footer-email"]}>
             <Link href="mailto:mason@masonmcintyre.com">
-              <a>
+              <a aria-label="email">
                 <i className="fa fa-envelope-o" aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="telephone" className={styles["footer-phone"]}>
             <Link href="tel:6104289142">
-              <a>
+              <a aria-label="telephone">
                 <i className={"fa fa-phone"} aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
             <Link href="skype:o0xpopeyex0o">
-              <a>
+              <a aria-label="skype">
                 <i className={"fa fa-skype"} aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
             <Link href="https://www.linkedin.com/in/mason-mcintyre-a68ab1b2">
-              <a>
+              <a aria-label="LinkedIn">
                 <i className={"fa fa-linkedin"} aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
             <Link href="https://github.com/mcintyremason">
-              <a>
+              <a aria-label="GitHub">
                 <i className={"fa fa-github"} aria-hidden="true"></i>
               </a>
             </Link>

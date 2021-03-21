@@ -27,6 +27,7 @@ const HamburgerNav: React.FC<HamburgerNavProps> = (
           active ? styles["is-active"] : "",
         )}
         type="button"
+        aria-label="hamburger"
       >
         <span className={styles["hamburger-box"]}>
           <span className={styles["hamburger-inner"]}></span>

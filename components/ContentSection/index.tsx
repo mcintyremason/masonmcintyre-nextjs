@@ -10,7 +10,7 @@ const ContentSection: React.FC<ContentSectionProps> = (
     <div className="main">
       <div className="img-container">
         <img
-          src="/img/20160720_Mt-Marcy-Stream-View_468x624.png"
+          src="/img/20160720_Mt-Marcy-Stream-View_468x624.webp"
           alt="Mt. Marcy"
         />
       </div>

@@ -28,6 +28,14 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
           itemProp="sameAs"
           content="http://www.huskers.com/ViewArticle.dbml?DB_OEM_ID=100&ATCLID=205267310"
         />
+        <meta
+          itemProp="sameAs"
+          content="https://www.instagram.com/mcintyremason/?hl=en"
+        />
+        <meta
+          itemProp="sameAs"
+          content="https://www.linkedin.com/in/mason-mcintyre-a68ab1b2"
+        />
         <Grid
           container
           className={classNames(styles["footer-icons"], styles["menu"])}

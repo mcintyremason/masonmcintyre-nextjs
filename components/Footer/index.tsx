@@ -69,22 +69,6 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
           </h4>
         </Grid>
       </Grid>
-
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-156934776-1"
-      ></script>
-      {/* <script>
-  {() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(s: string, d: Date | string) {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "UA-156934776-1");
-  }}
-</script> */}
     </>
   );
 };

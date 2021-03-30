@@ -4,10 +4,9 @@ import Head from "next/head";
 type Props = {
   children?: ReactNode;
   title?: string;
-  styles?: string;
 };
 
-const Layout = ({ children, title = "Mason McIntyre", styles = "" }: Props) => (
+const Layout = ({ children, title = "Mason McIntyre" }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -24,6 +23,24 @@ const Layout = ({ children, title = "Mason McIntyre", styles = "" }: Props) => (
         Node.js, Express.js, React, Angular 2/6, MySQL, RethinkDB, SASS/CSS, HTML/HTML5, SQL, 
         Unix, Linux, Java, C++, and C. Strong engineering professional with a 
         Bachelor of Science (BS) focused in Computer Science from Wilkes University.`}
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/img/icons/favicon-1/favicon.ico"
+      />
+      <link type="text/css" rel="preload" as="style" href="/css/app.css" />
+      <link type="text/css" rel="stylesheet" href="/css/app.css" />
+      <link
+        type="text/css"
+        rel="preload"
+        as="style"
+        href="/css/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+      />
+      <link
+        type="text/css"
+        rel="stylesheet"
+        href="/css/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
       />
     </Head>
     {children}

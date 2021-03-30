@@ -24,7 +24,11 @@ const Layout = ({ children, title = "Mason McIntyre", styles = "" }: Props) => (
       />
       <meta
         name="description"
-        content="Mason McIntyre is an experienced Software Engineer with a demonstrated history of working in the mechanical or industrial engineering industry. Skilled in JavaScript, Node.js, Express.js, React, Angular 2/6, MySQL, RethinkDB, SASS/CSS, HTML/HTML5, SQL, Unix, Linux, Java, C++, and C. Strong engineering professional with a Bachelor of Science (BS) focused in Computer Science from Wilkes University."
+        content={`Mason McIntyre is an experienced Software Engineer with a demonstrated history of 
+          working in the mechanical or industrial engineering industry. Skilled in JavaScript, 
+          Node.js, Express.js, React, Angular 2/6, MySQL, RethinkDB, SASS/CSS, HTML/HTML5, SQL, 
+          Unix, Linux, Java, C++, and C. Strong engineering professional with a 
+          Bachelor of Science (BS) focused in Computer Science from Wilkes University.`}
       />
       <link type="text/css" rel="preload" as="style" href="/css/app.css" />
       <link type="text/css" rel="stylesheet" href="/css/app.css" />

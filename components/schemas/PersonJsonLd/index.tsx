@@ -16,7 +16,10 @@ const makePersonSchema = () => {
       {
         "@type": "Organization",
         name: "Disney Streaming Services",
-        sameAs: ["https://www.disneystreaming.com/"],
+        sameAs: [
+          "https://www.disneystreaming.com/",
+          "https://www.zoominfo.com/p/Mason-Mcintyre/-1663762159",
+        ],
       },
     ],
     sameAs: [
@@ -29,6 +32,9 @@ const makePersonSchema = () => {
       "http://www.gowilkesu.com/roster.aspx?rp_id=4947",
       "https://www.lehighvalleylive.com/sports/2011/05/easton_area_high_schools_mason.html",
       "https://www.mcall.com/sports/penn-state/mc-xpm-2011-05-13-mc-easton-wrestling-20110513-story.html",
+      "https://www.zoominfo.com/p/Mason-Mcintyre/-1663762159",
+      "https://rocketreach.co/mason-mcintyre-email_60073435",
+      "https://www.lusha.com/people/mason-mcintyre/3846e057c0124ba5/",
     ],
   };
 };

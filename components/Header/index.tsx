@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
           >
             <h1 itemProp="name" className={styles["header-name"]}>
               <Link className={styles["name"]} href="/">
-                <span itemProp="givenName">Mason</span>
+                <span itemProp="givenName">Mason </span>
                 <span itemProp="familyName">McIntyre</span>
               </Link>
             </h1>

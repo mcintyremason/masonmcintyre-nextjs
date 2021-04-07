@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
+import PersonJsonLd from "../schemas/PersonJsonLd";
 
 type Props = {
   children?: ReactNode;
@@ -10,6 +11,7 @@ const Layout = ({ children, title = "Mason McIntyre" }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
+      <PersonJsonLd />
       <meta charSet="utf-8" />
       <meta
         name="google-site-verification"

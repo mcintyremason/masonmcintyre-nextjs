@@ -12,7 +12,7 @@ const DrawPage = () => (
         <>
           <Header />
           <Draw />
-          <Footer isAbsolute />
+          <Footer />
         </>
       </div>
     </div>

@@ -374,7 +374,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
         <h2 className="misc-title">Misc.</h2>
         <div className="misc">
           <ul>
-            <li>Wrote first program on apple //e in eighth grade</li>
+            <li>Wrote first program on an Apple //e in eighth grade</li>
             <li itemProp="award">All-American Wrestler</li>
             <li itemProp="award">
               2011 PIAA AAA Wrestling Team State Runner-up, Varsity Wrestler

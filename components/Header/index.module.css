@@ -20,7 +20,7 @@ header.app-bar {
 }
 
 .header .header-name .name span {
-  padding: 0 10px 0 0;
+  padding: 0;
 }
 
 .header .header-name .name span:last-child {

@@ -15,14 +15,14 @@ class MyDocument extends Document {
           <NextScript />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-0ME2VG1H10"
+            src="https://www.googletagmanager.com/gtag/js?id=UA-156934776-1"
           ></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-0ME2VG1H10');`,
+              function gtag() { dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-156934776-1');`,
             }}
           />
         </body>

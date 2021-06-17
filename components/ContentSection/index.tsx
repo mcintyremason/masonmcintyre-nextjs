@@ -25,7 +25,7 @@ const ContentSection: React.FC<ContentSectionProps> = (
             Disney Streaming Services
           </Link>
           . I develop & maintain React applications written in TypeScript, REST
-          servers using Scala, architect systems with AWS infrastrcture, promote
+          servers using Scala, architect systems with AWS infrastructure, promote
           code changes with custom Jenkins pipelines & initiated/lead monthly
           education sessions that promote collaboration with other team members
           by showcasing topics they find interesting.

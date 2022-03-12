@@ -10,8 +10,8 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
         <img
           src="/img/20160720_Mt-Marcy-Stream-View_468x624.webp"
           alt="Mt. Marcy"
-          width="468"
-          height="624"
+          width="262"
+          height="350"
         />
       </div>
       <div className="about-container">

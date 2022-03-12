@@ -338,6 +338,11 @@ h6 {
   text-align: unset;
 }
 
+.app.index .main .about-container p:first-child {
+  margin: 0;
+  text-align: unset;
+}
+
 .app.projects .header-container {
   height: 74px;
 }
@@ -495,8 +500,6 @@ h6 {
     grid-template-columns: 15% auto 15%;
   }
   .app.index .main .img-container img {
-    max-height: 624px;
-    max-width: 468px;
     width: 100%;
   }
   .app.projects .main {
@@ -506,7 +509,7 @@ h6 {
 
 @media screen and (min-width: 660px) {
   .app.index .main {
-    margin: var(--desktop-header-height) 0;
+    margin: var(--desktop-header-height) 0 0;
   }
   .app .header-container .header {
     margin: 0 4%;
@@ -646,7 +649,7 @@ h6 {
     margin: var(--desktop-header-height) 0 0;
   }
   .app.index .main .about-container {
-    margin: 40px 0 0;
+    margin: 0;
   }
   .app.projects .header-container {
     height: auto;

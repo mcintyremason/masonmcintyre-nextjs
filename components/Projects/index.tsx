@@ -1,7 +1,7 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link'
+import React from 'react'
 
-type ProjectsProps = {};
+type ProjectsProps = {}
 
 const Projects: React.FC<ProjectsProps> = (_: ProjectsProps) => {
   return (
@@ -15,6 +15,9 @@ const Projects: React.FC<ProjectsProps> = (_: ProjectsProps) => {
           </Link>
         </h4>
         <h4 className="project">
+          <Link href="https://cryptoget.dev">Crypto Get - cryptoget.dev</Link>
+        </h4>
+        <h4 className="project">
           <Link href="/projects/card-matcher/">Card Matcher</Link>
         </h4>
         <h4 className="project">
@@ -25,7 +28,7 @@ const Projects: React.FC<ProjectsProps> = (_: ProjectsProps) => {
         </h4>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

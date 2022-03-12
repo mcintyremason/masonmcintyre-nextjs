@@ -16,8 +16,8 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
       </div>
       <div className="about-container">
         <p className="about">
-          <span id="greeting">Hey there!</span> I'm Mason McIntyre, & I'm a 28 year old currently
-          living in Bethlehem, Pennsylvania. I'm a Software Engineer at
+          <span id="greeting">Hey there!</span> I'm Mason McIntyre, & I'm a 29 year old currently
+          living in Bethlehem, Pennsylvania. I'm a Senior Software Engineer at
           <Link href="https://www.disneystreaming.com/">Disney Streaming Services</Link>. I develop
           & maintain React applications written in TypeScript, REST servers using Scala, architect
           systems with AWS infrastructure, promote code changes with custom Jenkins pipelines &

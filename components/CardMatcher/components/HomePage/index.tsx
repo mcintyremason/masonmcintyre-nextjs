@@ -1,33 +1,27 @@
-import React, { useState, useEffect } from "react";
-import {
-  Grid,
-  Switch,
-  FormControl,
-  FormGroup,
-  FormControlLabel,
-} from "@material-ui/core";
-import Game from "../Game";
-import { MatchCardProps } from "../MatchCard";
-import ToyStoryDeck from "../../decks/ToyStoryDeck";
-import MainMenu from "../DifficultyMenu";
-import Fireworks from "../Fireworks";
+import { FormControl, FormControlLabel, FormGroup, Grid, Switch } from '@material-ui/core'
+import React, { useEffect, useState } from 'react'
+import ToyStoryDeck from '../../decks/ToyStoryDeck'
+import MainMenu from '../DifficultyMenu'
+import Fireworks from '../Fireworks'
+import Game from '../Game'
+import { MatchCardProps } from '../MatchCard'
 // import "./index.css";
 
 type GameContextType = {
-  cards: Array<MatchCardProps>;
-  difficulty: number;
-  gameOver: boolean;
-  gameRunning: boolean;
-  isDarkMode: boolean;
-  setCards: React.Dispatch<React.SetStateAction<MatchCardProps[]>>;
-  setDifficulty: React.Dispatch<React.SetStateAction<number>>;
-  setGameOver: React.Dispatch<React.SetStateAction<boolean>>;
-  setGameRunning: React.Dispatch<React.SetStateAction<boolean>>;
-};
+  cards: Array<MatchCardProps>
+  difficulty: number
+  gameOver: boolean
+  gameRunning: boolean
+  isDarkMode: boolean
+  setCards: React.Dispatch<React.SetStateAction<MatchCardProps[]>>
+  setDifficulty: React.Dispatch<React.SetStateAction<number>>
+  setGameOver: React.Dispatch<React.SetStateAction<boolean>>
+  setGameRunning: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-const RESET_CARDS_DELAY = 1500;
-const RESET_GAME_DELAY = 8000;
-const WIN_DELAY = 1000;
+const RESET_CARDS_DELAY = 1500
+const RESET_GAME_DELAY = 8000
+const WIN_DELAY = 1000
 
 export const GameContext = React.createContext<GameContextType>({
   cards: [],
@@ -39,51 +33,47 @@ export const GameContext = React.createContext<GameContextType>({
   setDifficulty: () => null,
   setGameOver: () => null,
   setGameRunning: () => null,
-});
+})
 
 const HomePage = () => {
-  const [cards, setCards] = useState<MatchCardProps[]>(ToyStoryDeck);
-  const [difficulty, setDifficulty] = useState<number>(0);
-  const [gameRunning, setGameRunning] = useState<boolean>(false);
-  const [gameOver, setGameOver] = useState<boolean>(false);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [cards, setCards] = useState<MatchCardProps[]>(ToyStoryDeck)
+  const [difficulty, setDifficulty] = useState<number>(0)
+  const [gameRunning, setGameRunning] = useState<boolean>(false)
+  const [gameOver, setGameOver] = useState<boolean>(false)
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
 
   const cardsFromDifficulty = () => {
     return difficulty === 0
       ? setCards(ToyStoryDeck.filter((card) => card.id <= 8))
       : difficulty === 1
       ? setCards(ToyStoryDeck.filter((card) => card.id <= 16))
-      : setCards(ToyStoryDeck.filter((card) => card.id <= 24));
-  };
+      : setCards(ToyStoryDeck.filter((card) => card.id <= 24))
+  }
 
   const selectGameDifficulty = (): any => {
-    setDifficulty(difficulty);
-    return cardsFromDifficulty();
-  };
+    setDifficulty(difficulty)
+    return cardsFromDifficulty()
+  }
 
-  const toggleIsDarkMode = () => setIsDarkMode(!isDarkMode);
+  const toggleIsDarkMode = () => setIsDarkMode(!isDarkMode)
 
   useEffect(() => {
-    selectGameDifficulty();
-  }, [difficulty]);
+    selectGameDifficulty()
+  }, [difficulty])
 
   return (
-    <Grid className={`home-page-container ${isDarkMode ? "dark" : "light"}`}>
+    <Grid className={`home-page-container ${isDarkMode ? 'dark' : 'light'}`}>
       {gameOver && <Fireworks />}
-      {/* <Grid container justify="center" alignItems="center" className="title">
+      {/* <Grid container justifyContent="center" alignItems="center" className="title">
         <Typography variant="h2">Card Matcher</Typography>
       </Grid> */}
-      <Grid container justify="center" alignItems="center">
+      <Grid container justifyContent="center" alignItems="center">
         <FormControl component="fieldset">
           <FormGroup aria-label="position" row>
             <FormControlLabel
               value="top"
               control={
-                <Switch
-                  checked={isDarkMode}
-                  onChange={toggleIsDarkMode}
-                  name="darkModeToggle"
-                />
+                <Switch checked={isDarkMode} onChange={toggleIsDarkMode} name="darkModeToggle" />
               }
               label="Dark Mode"
               labelPlacement="start"
@@ -94,7 +84,7 @@ const HomePage = () => {
       <Grid
         container
         direction="row"
-        justify="center"
+        justifyContent="center"
         alignItems="center"
         className="game-container"
       >
@@ -124,6 +114,6 @@ const HomePage = () => {
         </GameContext.Provider>
       </Grid>
     </Grid>
-  );
-};
-export default HomePage;
+  )
+}
+export default HomePage

@@ -530,7 +530,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
             Misc.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={7} lg={8} xl={9}>
+        <Grid item xs={12} md={7} lg={8}>
           <Grid container className={styles['misc']}>
             <ul>
               <li>Wrote first program on an Apple //e in eighth grade</li>

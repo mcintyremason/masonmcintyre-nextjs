@@ -1,22 +1,48 @@
+import { Grid, Typography } from '@material-ui/core'
 import Link from 'next/link'
 import React from 'react'
+import styles from './resume.module.css'
 
 type ResumeProps = {}
 
 const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
   return (
-    <div className="main">
-      <div id="downloads-container" className="downloads-container">
+    <Grid container direction="column" className={styles['resume-container']}>
+      <Grid
+        id="downloads-container"
+        container
+        justifyContent="flex-end"
+        className={styles['downloads-container']}
+      >
         <Link href="/docs/Mason-McIntyre-Resume.pdf">
           <a>
             <i className="fa fa-download"></i>&nbsp;Download
           </a>
         </Link>
-      </div>
-      <div id="education-container" className="education-container">
-        <h2 className="education-title">Education</h2>
-        <div className="education">
-          <h4>
+      </Grid>
+      <Grid
+        id="education-container"
+        container
+        justifyContent="space-between"
+        className={styles['education-container']}
+      >
+        <Grid item xs={12} md={4} lg={3}>
+          <Grid container justifyContent="flex-start" className={styles['section-title-container']}>
+            <Typography variant="h2" className={styles['education-title']}>
+              Education
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={7}
+          lg={8}
+          direction="column"
+          justifyContent="center"
+          className={styles['education']}
+        >
+          <Typography variant="h4">
             B.S, Computer Science -
             <span itemProp="alumniOf">
               <Link href="https://www.wilkes.edu/bulletin/current/undergraduate/degrees-programs/department-mathematics-computer-science/computer-science/index.aspx">
@@ -24,23 +50,34 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </Link>
             </span>
             - 2015
-          </h4>
-        </div>
-      </div>
-      <div id="experiences-container" className="experiences-container">
-        <h2 className="experiences-title">Experience</h2>
-        <div className="experiences">
-          <div className="experience">
-            <h4>
-              <span className="job-title" itemProp="jobTitle">
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid
+        id="experiences-container"
+        container
+        justifyContent="space-between"
+        className={styles['experiences-container']}
+      >
+        <Grid item xs={12} md={4} lg={3}>
+          <Grid container justifyContent="flex-start" className={styles['section-title-container']}>
+            <Typography variant="h2" className={styles['experiences-title']}>
+              Experience
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={7} lg={8} className={styles['experiences']}>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
               </span>
               ,
               <span itemProp="worksFor">
                 <Link href="https://dmedmedia.disney.com/">Disney Streaming Services</Link>
               </span>
-            </h4>
-            <h5>March 2020 - Present</h5>
+            </Typography>
+            <Typography variant="h5">March 2020 - Present</Typography>
             <ul>
               <li>
                 Develop & maintain the company’s customer service (CS) tool, using React,
@@ -61,64 +98,80 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 collaboration
               </li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">TypeScript</li>
-                  <li className="tech">Scala</li>
-                  <li className="tech">AWS</li>
-                  <li className="tech">Cypress</li>
-                  <li className="tech">Jenkins</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">React</li>
-                  <li className="tech">Play Framework</li>
-                  <li className="tech">PostgreSQL</li>
-                  <li className="tech">Docker</li>
-                  <li className="tech">Node.js</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>
-              <span className="job-title" itemProp="jobTitle">
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>TypeScript</li>
+                    <li className={styles['tech']}>Scala</li>
+                    <li className={styles['tech']}>AWS</li>
+                    <li className={styles['tech']}>Cypress</li>
+                    <li className={styles['tech']}>Jenkins</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>React</li>
+                    <li className={styles['tech']}>Play Framework</li>
+                    <li className={styles['tech']}>PostgreSQL</li>
+                    <li className={styles['tech']}>Docker</li>
+                    <li className={styles['tech']}>Node.js</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
               </span>
               ,
               <span itemProp="worksFor">
                 <Link href="http://www.shift4.com/">Shift4</Link>
               </span>
-            </h4>
-            <h5>January 2020 - March 2020</h5>
+            </Typography>
+            <Typography variant="h5">January 2020 - March 2020</Typography>
             <ul>
               <li>Worked on the Harbortouch project</li>
               <li>Helped maintain an app written in Ember.js</li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript (ES5/6)</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">Ember.js</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>
-              <span className="job-title" itemProp="jobTitle">
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript (ES5/6)</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>Ember.js</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
               </span>
               ,
               <span itemProp="worksFor">
                 <Link href="https://advisorinnovationlabs.com/">A I Labs</Link>
               </span>
-            </h4>
-            <h5>February 2019 - January 2020</h5>
+            </Typography>
+            <Typography variant="h5">February 2019 - January 2020</Typography>
             <ul>
               <li>Develops REST-API endpoints, in Node.js/Express & Java/SpringBoot.</li>
               <li>Maintains & implements integrations, using Node.js/Express.</li>
@@ -133,40 +186,48 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 code base.
               </li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript (ES5/6)</li>
-                  <li className="tech">Node.js</li>
-                  <li className="tech">Ionic/Capacitor</li>
-                  <li className="tech">Socket.io</li>
-                  <li className="tech">Linux/BASH</li>
-                  <li className="tech">SCSS/CSS</li>
-                  <li className="tech">HTML</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">TypeScript</li>
-                  <li className="tech">React</li>
-                  <li className="tech">REST</li>
-                  <li className="tech">Java</li>
-                  <li className="tech">Bull Queue</li>
-                  <li className="tech">Git</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>
-              <span className="job-title" itemProp="jobTitle">
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript (ES5/6)</li>
+                    <li className={styles['tech']}>Node.js</li>
+                    <li className={styles['tech']}>Ionic/Capacitor</li>
+                    <li className={styles['tech']}>Socket.io</li>
+                    <li className={styles['tech']}>Linux/BASH</li>
+                    <li className={styles['tech']}>SCSS/CSS</li>
+                    <li className={styles['tech']}>HTML</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>TypeScript</li>
+                    <li className={styles['tech']}>React</li>
+                    <li className={styles['tech']}>REST</li>
+                    <li className={styles['tech']}>Java</li>
+                    <li className={styles['tech']}>Bull Queue</li>
+                    <li className={styles['tech']}>Git</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
               </span>
               ,
               <span itemProp="worksFor">
                 <Link href="https://www.gojikiosk.com">Goji Systems</Link>
               </span>
-            </h4>
-            <h5>February 2018 - February 2019</h5>
+            </Typography>
+            <Typography variant="h5">February 2018 - February 2019</Typography>
             <ul>
               <li>First salaried employee</li>
               <li>Developed REST-API endpoints in Node.js/Express</li>
@@ -174,39 +235,47 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               <li>Implemented message queuing using Redis & Socket.io for push to front-end</li>
               <li>Responsible for server operations & code promotion</li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript (ES5/6)</li>
-                  <li className="tech">Node.js</li>
-                  <li className="tech">Angular 2+</li>
-                  <li className="tech">Socket.io</li>
-                  <li className="tech">Git</li>
-                  <li className="tech">HTML</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">TypeScript</li>
-                  <li className="tech">RethinkDB</li>
-                  <li className="tech">RxJS</li>
-                  <li className="tech">REST</li>
-                  <li className="tech">Linux/BASH</li>
-                  <li className="tech">SCSS/CSS</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>
-              <span className="job-title" itemProp="jobTitle">
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript (ES5/6)</li>
+                    <li className={styles['tech']}>Node.js</li>
+                    <li className={styles['tech']}>Angular 2+</li>
+                    <li className={styles['tech']}>Socket.io</li>
+                    <li className={styles['tech']}>Git</li>
+                    <li className={styles['tech']}>HTML</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>TypeScript</li>
+                    <li className={styles['tech']}>RethinkDB</li>
+                    <li className={styles['tech']}>RxJS</li>
+                    <li className={styles['tech']}>REST</li>
+                    <li className={styles['tech']}>Linux/BASH</li>
+                    <li className={styles['tech']}>SCSS/CSS</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
               </span>
               ,
               <span itemProp="worksFor">
                 <Link href="https://www.victaulic.com">Victaulic</Link>
               </span>
-            </h4>
-            <h5>September 2016 - February 2018</h5>
+            </Typography>
+            <Typography variant="h5">September 2016 - February 2018</Typography>
             <ul>
               <li>
                 Manage & maintain SharePoint Online Intranet, which services over 3,500 employees.
@@ -240,37 +309,45 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 on various sites.
               </li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript (ES6)</li>
-                  <li className="tech">Gulp</li>
-                  <li className="tech">AngularJS 1.3</li>
-                  <li className="tech">Git</li>
-                  <li className="tech">HTML</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">Node.js</li>
-                  <li className="tech">REST</li>
-                  <li className="tech">Linux/BASH</li>
-                  <li className="tech">PowerShell</li>
-                  <li className="tech">CSS</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>
-              <span className="job-title" itemProp="jobTitle">
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript (ES6)</li>
+                    <li className={styles['tech']}>Gulp</li>
+                    <li className={styles['tech']}>AngularJS 1.3</li>
+                    <li className={styles['tech']}>Git</li>
+                    <li className={styles['tech']}>HTML</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>Node.js</li>
+                    <li className={styles['tech']}>REST</li>
+                    <li className={styles['tech']}>Linux/BASH</li>
+                    <li className={styles['tech']}>PowerShell</li>
+                    <li className={styles['tech']}>CSS</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
                 Web Developer
               </span>
               ,
               <span itemProp="worksFor">
                 <Link href="http://www.liquidint.com">Liquid Interactive</Link>
               </span>
-            </h4>
-            <h5>November 2015 - September 2016</h5>
+            </Typography>
+            <Typography variant="h5">November 2015 - September 2016</Typography>
             <ul>
               <li>
                 Redesigned & maintained close to 25 static & dynamic websites for world-renowned
@@ -286,42 +363,50 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 environment using Linux virtual machines.
               </li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript (ES6)</li>
-                  <li className="tech">AngularJS 1.0</li>
-                  <li className="tech">Sass/Less/CSS</li>
-                  <li className="tech">PHP</li>
-                  <li className="tech">Apache</li>
-                  <li className="tech">Vagrant</li>
-                  <li className="tech">Scotch Box</li>
-                  <li className="tech">MySQL</li>
-                  <li className="tech">Wordpress</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">Node.js</li>
-                  <li className="tech">HTML</li>
-                  <li className="tech">C#</li>
-                  <li className="tech">NGINX</li>
-                  <li className="tech">VVV</li>
-                  <li className="tech">Microsoft SQL Server</li>
-                  <li className="tech">HeidiSQL</li>
-                  <li className="tech">Umbraco</li>
-                  <li className="tech">Sitecore</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript (ES6)</li>
+                    <li className={styles['tech']}>AngularJS 1.0</li>
+                    <li className={styles['tech']}>Sass/Less/CSS</li>
+                    <li className={styles['tech']}>PHP</li>
+                    <li className={styles['tech']}>Apache</li>
+                    <li className={styles['tech']}>Vagrant</li>
+                    <li className={styles['tech']}>Scotch Box</li>
+                    <li className={styles['tech']}>MySQL</li>
+                    <li className={styles['tech']}>Wordpress</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>Node.js</li>
+                    <li className={styles['tech']}>HTML</li>
+                    <li className={styles['tech']}>C#</li>
+                    <li className={styles['tech']}>NGINX</li>
+                    <li className={styles['tech']}>VVV</li>
+                    <li className={styles['tech']}>Microsoft SQL Server</li>
+                    <li className={styles['tech']}>HeidiSQL</li>
+                    <li className={styles['tech']}>Umbraco</li>
+                    <li className={styles['tech']}>Sitecore</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
               Software Development Intern,
               <Link href="http://www.baseballinfosolutions.com">BaseballInfoSolutions</Link>
               <span> / </span>
               <Link href="http://www.sportsinfosolutions.com">SportsInfoSolutions</Link>
-            </h4>
-            <h5>June 2015 - November 2015</h5>
+            </Typography>
+            <Typography variant="h5">June 2015 - November 2015</Typography>
             <ul>
               <li>Developed dynamic & static web pages using ASP.NET & JavaScript.</li>
               <li>Created underlying SQL database architecture for aggregating football data.</li>
@@ -334,27 +419,35 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 server-side Ruby programs & parsed output to an interactive user interface.
               </li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript</li>
-                  <li className="tech">HTML</li>
-                  <li className="tech">Microsoft SQL Server</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">ASP.NET</li>
-                  <li className="tech">CSS</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript</li>
+                    <li className={styles['tech']}>HTML</li>
+                    <li className={styles['tech']}>Microsoft SQL Server</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>ASP.NET</li>
+                    <li className={styles['tech']}>CSS</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">
               Software Development Intern,
               <Link href="http://www.trailkam.com">TrailKam.com</Link>
-            </h4>
-            <h5>January 2015 - June 2015</h5>
+            </Typography>
+            <Typography variant="h5">January 2015 - June 2015</Typography>
             <ul>
               <li>
                 Worked closely with the founder of TrailKam, Bernie Graham, to get trailkam.com to a
@@ -362,68 +455,97 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </li>
               <li>Presented work at the Eastern Colleges Science Conference in Niagara, NY.</li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript</li>
-                  <li className="tech">HTML</li>
-                  <li className="tech">Microsoft SQL Server</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">PHP</li>
-                  <li className="tech">CSS</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>Software Development Intern, BrainRush.com</h4>
-            <h5>May 2014 - November 2014</h5>
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript</li>
+                    <li className={styles['tech']}>HTML</li>
+                    <li className={styles['tech']}>Microsoft SQL Server</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>PHP</li>
+                    <li className={styles['tech']}>CSS</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">Software Development Intern, BrainRush.com</Typography>
+            <Typography variant="h5">May 2014 - November 2014</Typography>
             <ul>
               <li>Created static FAQ page using PHP, JavaScript, & CSS.</li>
               <li>Tested & tracked project software issues using JIRA like software.</li>
             </ul>
-            <div className="techs-container">
-              <h5 className="techs-title">Technologies Used:</h5>
-              <div className="techs">
-                <ul className="techs-one">
-                  <li className="tech">JavaScript</li>
-                  <li className="tech">Symfony 2</li>
-                  <li className="tech">CSS</li>
-                </ul>
-                <ul className="techs-two">
-                  <li className="tech">PHP</li>
-                  <li className="tech">HTML</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="experience">
-            <h4>Support Technician, Easton Area High School</h4>
-            <h5>May 2014 - September 2014</h5>
+            <Grid container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid item xs={12} lg={3}>
+                <Typography variant="h5" className={styles['techs-title']}>
+                  Technologies Used:
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-one']}>
+                    <li className={styles['tech']}>JavaScript</li>
+                    <li className={styles['tech']}>Symfony 2</li>
+                    <li className={styles['tech']}>CSS</li>
+                  </ul>
+                </Grid>
+                <Grid item xs={6}>
+                  <ul className={styles['techs-two']}>
+                    <li className={styles['tech']}>PHP</li>
+                    <li className={styles['tech']}>HTML</li>
+                  </ul>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={styles['experience']}>
+            <Typography variant="h4">Support Technician, Easton Area High School</Typography>
+            <Typography variant="h5">May 2014 - September 2014</Typography>
             <ul>
               <li>
                 Computer maintenance; including administration, imaging, troubleshooting, & repairs.
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-      <div id="misc-container" className="misc-container">
-        <h2 className="misc-title">Misc.</h2>
-        <div className="misc">
-          <ul>
-            <li>Wrote first program on an Apple //e in eighth grade</li>
-            <li itemProp="award">All-American Wrestler</li>
-            <li itemProp="award">2011 PIAA AAA Wrestling Team State Runner-up, Varsity Wrestler</li>
-            <li itemProp="award">
-              2011 PIAA AAAA District Champion Football Team, First Team Varsity Athlete
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid
+        id="misc-container"
+        container
+        justifyContent="space-between"
+        className={styles['misc-container']}
+      >
+        <Grid item xs={12} md={4} lg={3} className={styles['section-title-container']}>
+          <Typography variant="h2" className={styles['misc-title']}>
+            Misc.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={7} lg={8}>
+          <Grid container className={styles['misc']}>
+            <ul>
+              <li>Wrote first program on an Apple //e in eighth grade</li>
+              <li itemProp="award">All-American Wrestler</li>
+              <li itemProp="award">
+                2011 PIAA AAA Wrestling Team State Runner-up, Varsity Wrestler
+              </li>
+              <li itemProp="award">
+                2011 PIAA AAAA District Champion Football Team, First Team Varsity Athlete
+              </li>
+            </ul>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   )
 }
 

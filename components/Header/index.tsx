@@ -1,4 +1,4 @@
-import { AppBar, Grid, Link } from '@material-ui/core'
+import { AppBar, Grid, Link, Typography } from '@material-ui/core'
 import classNames from 'classnames'
 import React, { useState } from 'react'
 import HamburgerNav from '../HamburgerNav'
@@ -18,12 +18,12 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
       <Grid container direction="column" justifyContent="center">
         <Grid container className={styles['header']}>
           <Grid container item xs={10} sm={6} direction="column" justifyContent="center">
-            <h1 itemProp="name" className={styles['header-name']}>
+            <Typography variant="h1" itemProp="name" className={styles['header-name']}>
               <Link className={styles['name']} href="/">
                 <span itemProp="givenName">Mason </span>
                 <span itemProp="familyName">McIntyre</span>
               </Link>
-            </h1>
+            </Typography>
           </Grid>
           <Grid item xs={2} sm={6} className={styles['hamburger-nav-container']}>
             <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />

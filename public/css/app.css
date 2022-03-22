@@ -31,7 +31,7 @@
   text-rendering: optimizeLegibility;
   font-display: swap;
 }
-/* Webfont: BloggerSans */
+/* Webfont: San Frediano */
 @font-face {
   font-family: 'San Frediano';
   src: url('fonts/1001fonts/san_frediano_regular.ttf');
@@ -61,15 +61,6 @@ body > div > div {
 
 #root {
   height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--background-secondary);
 }
 
 /* Utilities */
@@ -144,35 +135,7 @@ h6 {
   color: var(--secondary-color);
   border-color: transparent;
 }
-.app h1,
-.app h2,
-.app h3,
-.app h4,
-.app h5,
-.app h6,
-.app p {
-  margin: 0;
-}
-.app h1 {
-  font-size: 1.75em;
-}
-.app h2 {
-  font-size: 1.5em;
-}
-.app h3 {
-  font-size: 1.25em;
-}
-.app h4 {
-  font-size: 1em;
-}
-.app h5 {
-  font-size: 0.9em;
-}
-.app h6 {
-  font-size: 0.8em;
-}
-.app li,
-.app p {
+.app li {
   font-size: 0.9em;
   font-weight: 468px;
   line-height: 1.4em;
@@ -182,129 +145,6 @@ h6 {
 }
 .app .hide {
   display: none;
-}
-.app .main {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 6% auto 6%;
-  grid-template-rows: auto;
-  grid-template-areas: '. downloads-container .' '. education-container .' '. experiences-container .' '. misc-container .';
-  margin: var(--mobile-header-height) 0 0;
-  padding: 20px 0;
-  min-height: 380px;
-  transition: all 1s;
-}
-.app .main a {
-  margin: 0 5px;
-}
-.app .main .downloads-container {
-  grid-area: downloads-container;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  padding: 0 0 10px 0;
-}
-.app .main .experiences-container {
-  grid-area: experiences-container;
-  margin: 30px 0 0;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: 'experiences-title' 'experiences';
-}
-.app .main .experiences-container .experiences-title {
-  grid-area: experiences-title;
-}
-.app .main .experiences-container .experiences {
-  grid-area: experiences;
-}
-.app .main .experiences-container .experiences .experience:first-child {
-  margin: 10px 0 0 10px;
-}
-.app .main .experiences-container .experiences .experience {
-  margin: 40px 0 0 10px;
-}
-.app .main .experiences-container .experiences .experience h4 {
-  margin: 5px 0 0 0;
-}
-.app .main .experiences-container .experiences .experience h5 {
-  margin: 10px 0 0 0;
-}
-.app .main .experiences-container .experiences .experience p {
-  margin: 10px 0;
-}
-.app .main .experiences-container .experiences .experience ul {
-  padding: 0 0 0 15px;
-}
-.app .main .experiences-container .experiences .experience .techs-container {
-  grid-template-columns: auto;
-  grid-template-rows: 10% auto;
-  grid-template-areas: 'techs-title' 'tech';
-}
-.app .main .experiences-container .experiences .experience .techs-container .techs {
-  display: grid;
-  grid-area: techs;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  grid-template-areas: 'techs-one techs-two';
-}
-.app .main .experiences-container .experiences .experience .techs-container .techs ul {
-  margin: 0;
-  padding: 0 0 0 15px;
-  list-style: none;
-}
-.app .main .experiences-container .experiences .experience .techs-container .techs .techs-one {
-  grid-area: techs-one;
-}
-.app .main .experiences-container .experiences .experience .techs-container .techs .techs-two {
-  grid-area: techs-two;
-}
-.app .main .experiences-container .experiences .experience h5 {
-  padding: 0 0 0 5px;
-}
-.app .main .experiences-container .experiences .experience ul {
-  margin: 0 0 0 5px;
-}
-.app .main .experiences-container .experiences .experience .techs-container {
-  padding: 0 0 0 2px;
-}
-.app .main .education-container {
-  display: grid;
-  grid-area: education-container;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: 'education-title' 'education';
-}
-.app .main .education-container .education-title {
-  grid-area: education-title;
-}
-.app .main .education-container .education {
-  grid-area: education;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  margin: 10px 0 0 10px;
-}
-.app .main .misc-container {
-  grid-area: misc-container;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: 'misc-title' 'misc';
-  margin: 30px 0 0;
-}
-.app .main .misc-container .misc-title {
-  grid-area: misc-title;
-}
-.app .main .misc-container .misc {
-  grid-area: misc;
-}
-.app .main .misc-container .misc ul {
-  padding: 0 0 0 15px;
-  margin: 0 0 0 10px;
-}
-.app .main .misc-container .misc ul li {
-  margin: 10px 0;
 }
 .app.index .main {
   grid-area: main;
@@ -518,26 +358,7 @@ h6 {
 }
 
 @media screen and (min-width: 768px) {
-  .app h1 {
-    font-size: 2.5em;
-  }
-  .app h2 {
-    font-size: 2em;
-  }
-  .app h3 {
-    font-size: 1.5em;
-  }
-  .app h4 {
-    font-size: 1.25em;
-  }
-  .app h5 {
-    font-size: 1em;
-  }
-  .app h6 {
-    font-size: 0.75em;
-  }
-  .app li,
-  .app p {
+  .app li {
     font-size: 1em;
     line-height: 1.5em;
   }
@@ -593,14 +414,6 @@ h6 {
     grid-template-columns: 11% auto 11%;
     margin: var(--desktop-header-height) 0 0;
     padding-top: 25px;
-  }
-  .app .main .objective-container {
-    grid-template-columns: 175px 75px auto;
-    grid-template-rows: auto;
-    grid-template-areas: 'objective-title . objective';
-  }
-  .app .main .objective-container .objective {
-    margin: 0;
   }
   .app .main .experiences-container {
     grid-template-columns: 175px 75px auto;
@@ -685,14 +498,6 @@ h6 {
   .app .main {
     height: calc(100% - 151px);
     margin: var(--desktop-header-height) 0 var(--footer-height);
-  }
-  .app .main .objective-container {
-    grid-template-columns: 175px 75px auto;
-    grid-template-rows: auto;
-    grid-template-areas: 'objective-title . objective';
-  }
-  .app .main .objective-container .objective {
-    margin: 0;
   }
   .app .main .experiences-container {
     grid-template-columns: 175px 75px auto;

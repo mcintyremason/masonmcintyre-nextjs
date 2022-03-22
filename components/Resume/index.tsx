@@ -38,7 +38,6 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
           xs={12}
           md={7}
           lg={8}
-          xl={9}
           direction="column"
           justifyContent="center"
           className={styles['education']}
@@ -67,7 +66,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={7} lg={8} xl={9} className={styles['experiences']}>
+        <Grid item xs={12} md={7} lg={8} className={styles['experiences']}>
           <Grid className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">

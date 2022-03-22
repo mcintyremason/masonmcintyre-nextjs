@@ -38,6 +38,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
           xs={12}
           md={7}
           lg={8}
+          xl={9}
           direction="column"
           justifyContent="center"
           className={styles['education']}
@@ -66,7 +67,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={7} lg={8} className={styles['experiences']}>
+        <Grid item xs={12} md={7} lg={8} xl={9} className={styles['experiences']}>
           <Grid className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
@@ -104,8 +105,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>Scala</li>
@@ -114,7 +115,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Jenkins</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>React</li>
                     <li className={styles['tech']}>Play Framework</li>
@@ -147,13 +148,13 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Ember.js</li>
                   </ul>
@@ -192,8 +193,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                     <li className={styles['tech']}>Node.js</li>
@@ -204,7 +205,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>HTML</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>React</li>
@@ -241,8 +242,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                     <li className={styles['tech']}>Node.js</li>
@@ -252,7 +253,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>HTML</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>RethinkDB</li>
@@ -315,8 +316,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES6)</li>
                     <li className={styles['tech']}>Gulp</li>
@@ -325,7 +326,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>HTML</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Node.js</li>
                     <li className={styles['tech']}>REST</li>
@@ -369,8 +370,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES6)</li>
                     <li className={styles['tech']}>AngularJS 1.0</li>
@@ -383,7 +384,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Wordpress</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Node.js</li>
                     <li className={styles['tech']}>HTML</li>
@@ -425,15 +426,15 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>HTML</li>
                     <li className={styles['tech']}>Microsoft SQL Server</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>ASP.NET</li>
                     <li className={styles['tech']}>CSS</li>
@@ -461,15 +462,15 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>HTML</li>
                     <li className={styles['tech']}>Microsoft SQL Server</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>PHP</li>
                     <li className={styles['tech']}>CSS</li>
@@ -491,15 +492,15 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6}>
+              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>Symfony 2</li>
                     <li className={styles['tech']}>CSS</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} xl={4}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>PHP</li>
                     <li className={styles['tech']}>HTML</li>
@@ -530,7 +531,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
             Misc.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={7} lg={8}>
+        <Grid item xs={12} md={7} lg={8} xl={9}>
           <Grid container className={styles['misc']}>
             <ul>
               <li>Wrote first program on an Apple //e in eighth grade</li>

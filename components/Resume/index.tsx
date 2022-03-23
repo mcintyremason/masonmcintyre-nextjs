@@ -26,22 +26,14 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
         justifyContent="space-between"
         className={styles['education-container']}
       >
-        <Grid item xs={12} md={4} lg={3}>
+        <Grid item xs={12} md={3} lg={3}>
           <Grid container justifyContent="flex-start" className={styles['section-title-container']}>
             <Typography variant="h2" className={styles['education-title']}>
               Education
             </Typography>
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={7}
-          lg={8}
-          direction="column"
-          justifyContent="center"
-          className={styles['education']}
-        >
+        <Grid item xs={12} md={8} lg={9} className={styles['education']}>
           <Typography variant="h4">
             B.S, Computer Science -
             <span itemProp="alumniOf">
@@ -59,14 +51,14 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
         justifyContent="space-between"
         className={styles['experiences-container']}
       >
-        <Grid item xs={12} md={4} lg={3}>
+        <Grid item xs={12} md={3} lg={3}>
           <Grid container justifyContent="flex-start" className={styles['section-title-container']}>
             <Typography variant="h2" className={styles['experiences-title']}>
               Experience
             </Typography>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={7} lg={8} className={styles['experiences']}>
+        <Grid item xs={12} md={8} lg={9} className={styles['experiences']}>
           <Grid className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
@@ -99,13 +91,13 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} xl={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>Scala</li>
@@ -114,7 +106,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Jenkins</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>React</li>
                     <li className={styles['tech']}>Play Framework</li>
@@ -142,18 +134,18 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               <li>Helped maintain an app written in Ember.js</li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Ember.js</li>
                   </ul>
@@ -187,13 +179,13 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                     <li className={styles['tech']}>Node.js</li>
@@ -204,7 +196,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>HTML</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>React</li>
@@ -236,13 +228,13 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               <li>Responsible for server operations & code promotion</li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                     <li className={styles['tech']}>Node.js</li>
@@ -252,7 +244,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>HTML</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>RethinkDB</li>
@@ -310,13 +302,13 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES6)</li>
                     <li className={styles['tech']}>Gulp</li>
@@ -325,7 +317,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>HTML</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Node.js</li>
                     <li className={styles['tech']}>REST</li>
@@ -364,13 +356,13 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES6)</li>
                     <li className={styles['tech']}>AngularJS 1.0</li>
@@ -383,7 +375,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Wordpress</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Node.js</li>
                     <li className={styles['tech']}>HTML</li>
@@ -420,20 +412,20 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>HTML</li>
                     <li className={styles['tech']}>Microsoft SQL Server</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>ASP.NET</li>
                     <li className={styles['tech']}>CSS</li>
@@ -456,20 +448,20 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               <li>Presented work at the Eastern Colleges Science Conference in Niagara, NY.</li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>HTML</li>
                     <li className={styles['tech']}>Microsoft SQL Server</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>PHP</li>
                     <li className={styles['tech']}>CSS</li>
@@ -486,20 +478,20 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               <li>Tested & tracked project software issues using JIRA like software.</li>
             </ul>
             <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3}>
+              <Grid item xs={12} lg={3} xl={4}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
               </Grid>
-              <Grid container item xs={12} lg={8} xl={9} className={styles['techs']}>
-                <Grid item xs={6} xl={4}>
+              <Grid container item xs={12} lg={8} className={styles['techs']}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>Symfony 2</li>
                     <li className={styles['tech']}>CSS</li>
                   </ul>
                 </Grid>
-                <Grid item xs={6} xl={4}>
+                <Grid item xs={6} xl={5}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>PHP</li>
                     <li className={styles['tech']}>HTML</li>
@@ -525,12 +517,12 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
         justifyContent="space-between"
         className={styles['misc-container']}
       >
-        <Grid item xs={12} md={4} lg={3} className={styles['section-title-container']}>
+        <Grid item xs={12} md={3} lg={3} className={styles['section-title-container']}>
           <Typography variant="h2" className={styles['misc-title']}>
             Misc.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={7} lg={8}>
+        <Grid item xs={12} md={8} lg={9}>
           <Grid container className={styles['misc']}>
             <ul>
               <li>Wrote first program on an Apple //e in eighth grade</li>

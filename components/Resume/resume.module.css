@@ -78,15 +78,11 @@
 
 @media screen and (min-width: 660px) {
   .resume-container {
-    padding-top: 25px;
+    padding: 25px 10%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .resume-container .section-title-container {
-    padding: 0 0 0 50px;
-  }
-
   .resume-container .education-container .education {
     margin: 10px 0 0;
   }
@@ -98,17 +94,12 @@
 
 @media screen and (min-width: 996px) {
   .resume-container {
-    height: calc(100% - 151px);
     margin: var(--desktop-header-height) 0 var(--footer-height);
-  }
-
-  .resume-container .section-title-container {
-    padding: 0 0 0 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .resume-container .section-title-container {
-    padding: 0 0 0 120px;
+  .resume-container {
+    padding: 25px 15%;
   }
 }

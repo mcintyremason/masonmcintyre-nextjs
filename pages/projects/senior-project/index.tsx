@@ -1,9 +1,7 @@
-import React from "react";
-
-import Layout from "../../components/Layout";
-import Header from "../../components/Header";
-import SeniorProject from "../../components/SeniorProject";
-import Footer from "../../components/Footer";
+import Footer from '../../../components/Footer'
+import Header from '../../../components/Header'
+import Layout from '../../../components/Layout'
+import SeniorProject from '../../../components/SeniorProject'
 
 const SeniorProjectPage = () => (
   <Layout title="Mason McIntyre">
@@ -17,6 +15,6 @@ const SeniorProjectPage = () => (
       </div>
     </div>
   </Layout>
-);
+)
 
-export default SeniorProjectPage;
+export default SeniorProjectPage

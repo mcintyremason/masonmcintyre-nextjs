@@ -1,0 +1,43 @@
+.layout {
+  position: relative;
+  height: inherit;
+  background-color: var(--background-primary);
+  font-family: 'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  transition: 1s all;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.layout::-webkit-scrollbar {
+  /* Remove scrollbar */
+  width: 0px;
+  /* Optional: just make scrollbar invisible */
+  background: transparent;
+}
+.layout a {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-bottom: 3px solid;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+.layout a:hover {
+  color: var(--secondary-color);
+  border-color: transparent;
+}
+.layout a:focus {
+  color: var(--secondary-color);
+  border-color: transparent;
+}
+.layout li {
+  font-size: 0.9em;
+  font-weight: 468px;
+  line-height: 1.4em;
+}
+.layout li {
+  margin: 10px 0;
+}
+.layout .hide {
+  display: none;
+}

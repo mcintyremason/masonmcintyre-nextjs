@@ -1,9 +1,7 @@
-import React from 'react'
-
-import Layout from '../../components/Layout'
-import Header from '../../components/Header'
-import Draw from '../../components/Draw'
-import Footer from '../../components/Footer'
+import Draw from '../../../components/Draw'
+import Footer from '../../../components/Footer'
+import Header from '../../../components/Header'
+import Layout from '../../../components/Layout'
 
 const DrawPage = () => (
   <Layout title="Mason McIntyre">

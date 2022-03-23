@@ -1,8 +1,9 @@
-import { ThemeProvider } from '@material-ui/core'
+import { Grid, ThemeProvider } from '@material-ui/core'
 import Head from 'next/head'
 import { ReactNode } from 'react'
 import customTheme from '../../styles/customMuiTheme'
 import PersonJsonLd from '../schemas/PersonJsonLd'
+import styles from './layout.module.css'
 
 type Props = {
   children?: ReactNode
@@ -10,7 +11,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'Mason McIntyre' }: Props) => (
-  <div>
+  <Grid className={styles['layout']}>
     <Head>
       <title>{title}</title>
       <PersonJsonLd />
@@ -42,7 +43,7 @@ const Layout = ({ children, title = 'Mason McIntyre' }: Props) => (
       />
     </Head>
     <ThemeProvider theme={customTheme}>{children}</ThemeProvider>
-  </div>
+  </Grid>
 )
 
 export default Layout

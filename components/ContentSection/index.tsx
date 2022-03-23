@@ -1,13 +1,14 @@
 import { Typography } from '@material-ui/core'
 import Link from 'next/link'
 import React from 'react'
+import styles from './contentSection.module.css'
 
 type ContentSectionProps = {}
 
 const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) => {
   return (
-    <div className="main">
-      <div className="img-container">
+    <div className={styles['main']}>
+      <div className={styles['img-container']}>
         <img
           src="/img/20160720_Mt-Marcy-Stream-View_468x624.webp"
           alt="Mt. Marcy"
@@ -15,8 +16,8 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
           height="350"
         />
       </div>
-      <div className="about-container">
-        <Typography className="about">
+      <div className={styles['about-container']}>
+        <Typography className={styles['about']}>
           <span id="greeting">Hey there!</span> I'm Mason McIntyre, & I'm a 29 year old currently
           living in Bethlehem, Pennsylvania. I'm a Senior Software Engineer at&nbsp;
           <Link href="https://www.disneystreaming.com/">Disney Streaming Services</Link>. I develop

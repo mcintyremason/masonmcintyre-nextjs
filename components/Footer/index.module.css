@@ -1,4 +1,4 @@
-.footer {
+.footer-container .footer {
   max-height: 38px;
   padding: 20px 0;
   background-color: var(--background-secondary);
@@ -7,7 +7,7 @@
   flex-flow: row nowrap;
 }
 
-.footer a {
+.footer-container .footer a {
   color: var(--primary-color);
   border-bottom: 3px solid;
   border-color: transparent;
@@ -15,17 +15,17 @@
   text-decoration: none;
 }
 
-.footer a:hover {
+.footer-container .footer a:hover {
   color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.footer a:focus {
+.footer-container .footer a:focus {
   color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.footer .footer-icons {
+.footer-container .footer .footer-icons {
   max-width: 300px;
   width: 100%;
   display: flex;
@@ -34,7 +34,7 @@
   padding: 0;
 }
 
-.footer h4 {
+.footer-container .footer h4 {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -42,31 +42,31 @@
   color: var(--primary-color);
 }
 
-.footer.absolute {
+.footer-container .footer.absolute {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
 @media screen and (min-width: 660px) {
-  .footer .footer-icons {
+  .footer-container .footer .footer-icons {
     max-width: 400px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
+  .footer-container .footer {
     width: 100%;
     bottom: 0;
   }
 
-  .footer .footer-icons {
+  .footer-container .footer .footer-icons {
     max-width: 500px;
   }
 }
 
 @media screen and (min-width: 996px) {
-  .footer {
+  .footer-container .footer {
     position: absolute;
   }
 }

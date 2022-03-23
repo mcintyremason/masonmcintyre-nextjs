@@ -1,0 +1,42 @@
+.app.projects .header-container {
+  height: 74px;
+}
+.app .header-container.active {
+  height: 120px;
+}
+
+.app.projects .main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: auto;
+  grid-template-areas: '. projects-container .';
+}
+.app.projects .main .projects-container {
+  grid-area: projects-container;
+}
+.app.projects .main .projects-container span {
+  margin: 0 5px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-bottom: 3px solid;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+.app.projects .main .projects-container span:hover {
+  color: var(--secondary-color);
+  border-color: transparent;
+  cursor: pointer;
+}
+.app.projects .main .projects-container .project:first-child {
+  margin: 0;
+}
+.app.projects .main .projects-container .project {
+  margin: 10px 0 0;
+}
+
+@media screen and (min-width: 375px) {
+  .app.projects .main {
+    min-height: 480px;
+  }
+}

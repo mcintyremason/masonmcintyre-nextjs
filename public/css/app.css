@@ -103,7 +103,7 @@ body > div > div {
   display: none;
 }
 
-.app {
+/* .app {
   position: relative;
   height: inherit;
   background-color: var(--background-primary);
@@ -116,10 +116,8 @@ body > div > div {
 }
 .app::-webkit-scrollbar {
   width: 0px;
-  /* Remove scrollbar */
   background: transparent;
-  /* Optional: just make scrollbar invisible */
-}
+} 
 .app a {
   color: var(--primary-color);
   border-color: var(--primary-color);
@@ -145,8 +143,8 @@ body > div > div {
 }
 .app .hide {
   display: none;
-}
-.app.index .main {
+} */
+/* .app.index .main {
   grid-area: main;
   display: grid;
   grid-template-columns: 10% auto 10%;
@@ -181,9 +179,9 @@ body > div > div {
 .app.index .main .about-container p:first-child {
   margin: 0;
   text-align: unset;
-}
+} */
 
-.app.projects .header-container {
+/* .app.projects .header-container {
   height: 74px;
 }
 .app .header-container.active {
@@ -218,7 +216,7 @@ body > div > div {
 }
 .app.projects .main .projects-container .project {
   margin: 10px 0 0;
-}
+} */
 
 .dark {
   background-color: var(--background-secondary);
@@ -410,7 +408,7 @@ body > div > div {
   .app .header-container .header .mobile-nav-container.active {
     height: 45px;
   }
-  .app .main {
+  /* .app .main {
     grid-template-columns: 11% auto 11%;
     margin: var(--desktop-header-height) 0 0;
     padding-top: 25px;
@@ -456,14 +454,14 @@ body > div > div {
   .app .main .misc-container .misc ul {
     padding: 0 0 0 15px;
     margin: 0;
-  }
-  .app.index .main {
+  } */
+  /* .app.index .main {
     grid-template-columns: auto 468px auto;
     margin: var(--desktop-header-height) 0 0;
   }
   .app.index .main .about-container {
     margin: 0;
-  }
+  } */
   .app.projects .header-container {
     height: auto;
   }
@@ -495,7 +493,7 @@ body > div > div {
   .app .hamburger {
     display: none;
   }
-  .app .main {
+  /* .app .main {
     height: calc(100% - 151px);
     margin: var(--desktop-header-height) 0 var(--footer-height);
   }
@@ -528,8 +526,8 @@ body > div > div {
   }
   .app .main .misc-container {
     grid-template-columns: 175px 75px auto;
-  }
-  .app.index .main {
+  } */
+  /* .app.index .main {
     grid-template-columns: auto 468px 5% 35% auto;
     grid-template-rows: auto;
     grid-template-areas: '. img-container . about-container .';
@@ -539,14 +537,14 @@ body > div > div {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-  }
+  } */
 }
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .app .main {
     grid-template-columns: 15% auto 15%;
   }
-}
+} */
 
 /* Card Matcher */
 /* DifficultyMenu Component */

@@ -1,0 +1,46 @@
+.draw-container {
+  height: 100%;
+}
+
+.draw-div {
+  display: block;
+  height: 100%;
+}
+
+.draw-title {
+  margin: 0 0 2%;
+  padding: 2% 0;
+}
+
+.title-canvas-container {
+  display: none;
+}
+
+.draw-menu-container {
+  height: 100%;
+}
+
+.mobile-title-container {
+  padding: 5%;
+}
+
+@media only screen and (min-width: 768px) {
+  .draw-menu-container {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 100%;
+  }
+
+  .mobile-title-container {
+    display: none;
+  }
+
+  .title-canvas-container {
+    display: block;
+  }
+
+  .title-canvas-container {
+    padding: 5% 0 0;
+  }
+}

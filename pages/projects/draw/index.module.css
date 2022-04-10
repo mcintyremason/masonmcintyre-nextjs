@@ -1,0 +1,12 @@
+.draw {
+  height: calc(100% - var(--mobile-header-height) - var(--footer-height));
+  margin: var(--mobile-header-height) 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .draw {
+    height: calc(100% - var(--desktop-header-height) - var(--footer-height));
+    margin: var(--desktop-header-height) 0 0;
+    color: var(--background-secondary);
+  }
+}

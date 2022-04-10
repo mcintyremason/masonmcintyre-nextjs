@@ -1,0 +1,11 @@
+.draw-canvas {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .draw-canvas {
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+  }
+}

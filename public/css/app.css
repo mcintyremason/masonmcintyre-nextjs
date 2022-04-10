@@ -104,43 +104,10 @@ body > div > div {
   display: none;
 }
 
-.dark {
-  background-color: var(--background-secondary);
-}
-.dark .app {
-  background: var(--background-secondary);
-}
-
-.drawCanvas {
-  border: 1px solid black;
-  display: block;
-  margin: auto;
-}
-
-.drawDiv {
-  display: block;
-}
-
-.drawTitle {
-  margin: 0 0 2%;
-  padding: 2% 0;
-}
-
-.drawMenuContainer {
-  display: block;
-  margin: 0 auto;
-  width: 600px;
-}
-
-.app.projects.draw {
-  height: calc(100% - var(--mobile-header-height) - 20px);
-  margin: var(--mobile-header-height) 0 0;
-  padding: 20px 0 0;
-}
-
 @media screen and (min-width: 375px) {
   .app {
     min-height: 480px;
+    height: 100%;
   }
   .app .header-container .header .header-nav .hamburger {
     width: 30px;
@@ -170,18 +137,6 @@ body > div > div {
   .app li {
     font-size: 1em;
     line-height: 1.5em;
-  }
-  .app.projects .header-container {
-    height: auto;
-  }
-  .dark .app .senior-project {
-    margin: var(--desktop-header-height) 0;
-    padding: 35px 0 0;
-  }
-  .app.projects.draw {
-    height: calc(100% - var(--desktop-header-height) - 20px);
-    margin: var(--desktop-header-height) 0 0;
-    color: var(--background-secondary);
   }
 }
 

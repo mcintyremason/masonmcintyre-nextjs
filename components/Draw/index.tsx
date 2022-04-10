@@ -1,4 +1,6 @@
-import { Typography } from '@material-ui/core'
+import styles from './draw.module.css'
+
+import { Grid, Typography } from '@material-ui/core'
 import React, { useState } from 'react'
 import Canvas from './DrawCanvas'
 import Shape from './Shape'
@@ -126,32 +128,38 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
   // };
 
   return (
-    <div className="drawContainer">
-      <div className="drawDiv">
-        <div className="drawMenuContainer">
-          <Typography variant="h1" className="drawTitle">
-            Draw
-          </Typography>
-          <div>
-            <select
-              name="shapes"
-              value={selectedShapeType}
-              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-                setSelectedShapeType(event.target.value)
-              }}
-            >
-              <option value="rectangle">Rectangle</option>
-              <option value="line">Line</option>
-              <option value="ellipse">Ellipse</option>
-              {/* <option value="text">Text</option> */}
-            </select>
-            <button type="button" id="undo" disabled={isUndoDisabled} onClick={undo}>
-              Undo
-            </button>
-            <button type="button" id="redo" disabled={isRedoDisabled} onClick={redo}>
-              Redo
-            </button>
-            {/* <button
+    <Grid className={styles['draw-container']}>
+      <Grid className={styles['draw-div']}>
+        <Grid className={styles['draw-menu-container']}>
+          <Grid className={styles['mobile-title-container']}>
+            <Typography variant="h1">
+              Available only on desktop. Please open on screen wider that 768 pixels.
+            </Typography>
+          </Grid>
+          <Grid className={styles['title-canvas-container']}>
+            <Typography variant="h1" className={styles['draw-title']}>
+              Draw
+            </Typography>
+            <Grid>
+              <select
+                name="shapes"
+                value={selectedShapeType}
+                onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                  setSelectedShapeType(event.target.value)
+                }}
+              >
+                <option value="rectangle">Rectangle</option>
+                <option value="line">Line</option>
+                <option value="ellipse">Ellipse</option>
+                {/* <option value="text">Text</option> */}
+              </select>
+              <button type="button" id="undo" disabled={isUndoDisabled} onClick={undo}>
+                Undo
+              </button>
+              <button type="button" id="redo" disabled={isRedoDisabled} onClick={redo}>
+                Redo
+              </button>
+              {/* <button
               type="button"
               id="save"
               disabled={shapes.length === 0}
@@ -162,100 +170,102 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
             <button type="button" id="load" onClick={load}>
               Load
             </button> */}
-          </div>
-          <div>
-            Outline
-            <input
-              type="checkbox"
-              name="outline"
-              checked={outline}
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                setOutline(event.target.checked)
-              }}
+            </Grid>
+            <Grid>
+              Outline
+              <input
+                type="checkbox"
+                name="outline"
+                checked={outline}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                  setOutline(event.target.checked)
+                }}
+              />
+              Fill
+              <input
+                type="checkbox"
+                name="fill"
+                checked={fill}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                  setFill(event.target.checked)
+                }}
+              />
+              <button
+                type="button"
+                id="forward"
+                disabled={isForwardDisabled || !shapes.find((shape) => shape === currentShape)}
+                onClick={moveShapeForward}
+              >
+                Forward
+              </button>
+              <button
+                type="button"
+                id="backward"
+                disabled={isBackwardDisabled}
+                onClick={moveShapeBackward}
+              >
+                Backward
+              </button>
+            </Grid>
+            <Grid>
+              Background
+              <input
+                type="color"
+                name="backgroundColor"
+                value={backgroundColor}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                  setBackgroundColor(event.target.value)
+                }}
+              />
+              Outline
+              <input
+                type="color"
+                name="outlineColor"
+                value={outlineColor}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                  setOutlineColor(event.target.value)
+                }}
+              />
+              Fill
+              <input
+                type="color"
+                name="fillColor"
+                value={fillColor}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                  setFillColor(event.target.value)
+                }}
+              />
+            </Grid>
+          </Grid>
+          <Grid>
+            <Canvas
+              width={600}
+              height={600}
+              className={'draw-canvas'}
+              backgroundColor={backgroundColor}
+              outlineColor={outlineColor}
+              fillColor={fillColor}
+              outline={outline}
+              fill={fill}
+              selectedShapeType={selectedShapeType}
+              shapes={shapes}
+              setShapes={setShapes}
+              currentShape={currentShape}
+              setCurrentShape={setCurrentShape}
+              reDraw={reDraw}
+              setReDraw={setReDraw}
+              reShapes={reShapes}
+              isLoading={isLoading}
+              setIsForwardDisabled={setIsForwardDisabled}
+              setIsBackwardDisabled={setIsBackwardDisabled}
+              setIsUndoDisabled={setIsUndoDisabled}
+              setIsRedoDisabled={setIsRedoDisabled}
+              setIsLoading={setIsLoading}
             />
-            Fill
-            <input
-              type="checkbox"
-              name="fill"
-              checked={fill}
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                setFill(event.target.checked)
-              }}
-            />
-            <button
-              type="button"
-              id="forward"
-              disabled={isForwardDisabled || !shapes.find((shape) => shape === currentShape)}
-              onClick={moveShapeForward}
-            >
-              Forward
-            </button>
-            <button
-              type="button"
-              id="backward"
-              disabled={isBackwardDisabled}
-              onClick={moveShapeBackward}
-            >
-              Backward
-            </button>
-          </div>
-          <div>
-            Background
-            <input
-              type="color"
-              name="backgroundColor"
-              value={backgroundColor}
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                setBackgroundColor(event.target.value)
-              }}
-            />
-            Outline
-            <input
-              type="color"
-              name="outlineColor"
-              value={outlineColor}
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                setOutlineColor(event.target.value)
-              }}
-            />
-            Fill
-            <input
-              type="color"
-              name="fillColor"
-              value={fillColor}
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                setFillColor(event.target.value)
-              }}
-            />
-          </div>
-        </div>
-        <div className="drawCavasContainer">
-          <Canvas
-            width={600}
-            height={600}
-            backgroundColor={backgroundColor}
-            outlineColor={outlineColor}
-            fillColor={fillColor}
-            outline={outline}
-            fill={fill}
-            selectedShapeType={selectedShapeType}
-            shapes={shapes}
-            setShapes={setShapes}
-            currentShape={currentShape}
-            setCurrentShape={setCurrentShape}
-            reDraw={reDraw}
-            setReDraw={setReDraw}
-            reShapes={reShapes}
-            isLoading={isLoading}
-            setIsForwardDisabled={setIsForwardDisabled}
-            setIsBackwardDisabled={setIsBackwardDisabled}
-            setIsUndoDisabled={setIsUndoDisabled}
-            setIsRedoDisabled={setIsRedoDisabled}
-            setIsLoading={setIsLoading}
-          />
-        </div>
-      </div>
-    </div>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   )
 }
 

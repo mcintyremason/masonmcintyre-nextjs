@@ -1,3 +1,7 @@
+.footer-container {
+  height: var(--footer-height);
+}
+
 .footer-container .footer {
   max-height: 38px;
   padding: 20px 0;
@@ -42,7 +46,7 @@
   color: var(--primary-color);
 }
 
-.footer-container .footer.absolute {
+.footer-container.absolute {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -62,11 +66,5 @@
 
   .footer-container .footer .footer-icons {
     max-width: 500px;
-  }
-}
-
-@media screen and (min-width: 996px) {
-  .footer-container .footer {
-    position: absolute;
   }
 }

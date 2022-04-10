@@ -12,11 +12,8 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
   const { isAbsolute } = props
 
   return (
-    <Grid className={styles['footer-container']}>
-      <Grid
-        id="footer"
-        className={classNames(styles['footer'], isAbsolute ? styles['absolute'] : '')}
-      >
+    <Grid className={classNames(styles['footer-container'], isAbsolute ? styles['absolute'] : '')}>
+      <Grid id="footer" className={classNames(styles['footer'])}>
         <meta itemProp="sameAs" content="http://www.gowilkesu.com/roster.aspx?rp_id=4947" />
         <meta
           itemProp="sameAs"

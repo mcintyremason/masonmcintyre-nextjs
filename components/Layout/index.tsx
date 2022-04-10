@@ -1,4 +1,5 @@
 import { Grid, ThemeProvider } from '@material-ui/core'
+import classnames from 'classnames'
 import Head from 'next/head'
 import { ReactNode } from 'react'
 import customTheme from '../../styles/customMuiTheme'
@@ -8,10 +9,11 @@ import styles from './layout.module.css'
 type Props = {
   children?: ReactNode
   title?: string
+  dark?: boolean
 }
 
-const Layout = ({ children, title = 'Mason McIntyre' }: Props) => (
-  <Grid className={styles['layout']}>
+const Layout = ({ children, title = 'Mason McIntyre', dark }: Props) => (
+  <Grid className={classnames(styles['layout'], dark ? styles['dark'] : '')}>
     <Head>
       <title>{title}</title>
       <PersonJsonLd />

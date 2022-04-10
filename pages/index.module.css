@@ -1,48 +1,5 @@
 .index {
   position: relative;
   height: inherit;
-  background-color: var(--background-primary);
-  font-family: 'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  transition: 1s all;
-  scrollbar-width: none;
   overflow-y: scroll;
-}
-
-.index .main {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 10% auto 10%;
-  grid-template-rows: auto;
-  grid-template-areas: '. img-container .' '. about-container .';
-  margin: var(--mobile-header-height) 0 0;
-  padding: 24px 0;
-}
-.index .main .img-container {
-  grid-area: img-container;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-}
-.index .main .img-container img {
-  width: initial;
-  max-height: 350px;
-  max-width: 262px;
-  margin: auto;
-  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
-}
-.index .main .about-container {
-  grid-area: about-container;
-  color: var(--border-primary);
-  margin: 25px 0 0;
-}
-.index .main .about-container p {
-  margin: 10px 0 0;
-  text-align: unset;
-}
-
-.index .main .about-container p:first-child {
-  margin: 0;
-  text-align: unset;
 }

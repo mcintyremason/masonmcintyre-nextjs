@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import Link from 'next/link'
 import React from 'react'
 import styles from './contentSection.module.css'
@@ -7,16 +7,34 @@ type ContentSectionProps = {}
 
 const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) => {
   return (
-    <div className={styles['main']}>
-      <div className={styles['img-container']}>
-        <img
-          src="/img/20160720_Mt-Marcy-Stream-View_468x624.webp"
-          alt="Mt. Marcy"
-          width="262"
-          height="350"
-        />
-      </div>
-      <div className={styles['about-container']}>
+    <Grid container className={styles['content-section-container']}>
+      <Grid item xs={12} lg={6} xl={6}>
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          className={styles['img-container']}
+        >
+          <Grid container justifyContent="center">
+            <img
+              src="/img/20160720_Mt-Marcy-Stream-View_468x624.webp"
+              alt="Mt. Marcy"
+              width="262"
+              height="350"
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        lg={6}
+        xl={5}
+        container
+        direction="column"
+        justifyContent="flex-start"
+        className={styles['about-container']}
+      >
         <Typography className={styles['about']}>
           <span id="greeting">Hey there!</span> I'm Mason McIntyre, & I'm a 29 year old currently
           living in Bethlehem, Pennsylvania. I'm a Senior Software Engineer at&nbsp;
@@ -40,8 +58,8 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
           </a>
           &nbsp;page!
         </Typography>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   )
 }
 

@@ -2,7 +2,7 @@ import { Fab, Grid } from '@material-ui/core'
 import { useContext } from 'react'
 import { GameContext } from '../HomePage'
 
-// import './index.css'
+import styles from './difficultyMenu.module.css'
 
 const MainMenu = () => {
   const { setDifficulty, setGameRunning } = useContext(GameContext)
@@ -18,7 +18,7 @@ const MainMenu = () => {
       direction="column"
       justifyContent="space-evenly"
       alignItems="center"
-      className="difficulty-menu-container"
+      className={styles['difficulty-menu-container']}
     >
       <Fab variant="extended" color="primary" aria-label="add" onClick={() => selectMenuOption(0)}>
         Easy

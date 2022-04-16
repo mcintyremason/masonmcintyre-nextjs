@@ -109,28 +109,6 @@ body > div > div {
     min-height: 480px;
     height: 100%;
   }
-  .app .header-container .header .header-nav .hamburger {
-    width: 30px;
-  }
-  .app.index .main {
-    grid-template-columns: 15% auto 15%;
-  }
-  .app.index .main .img-container img {
-    width: 100%;
-  }
-  .app.projects .main {
-    min-height: 480px;
-  }
-}
-
-@media screen and (min-width: 660px) {
-  .app.index .main {
-    margin: var(--desktop-header-height) 0 0;
-  }
-  .app .header-container .header {
-    margin: 0 4%;
-    padding: 0;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -144,84 +122,6 @@ body > div > div {
   .app li,
   .app p {
     text-align: justify;
-  }
-
-  .app .senior-project .canvasContainer {
-    min-height: 460px;
-  }
-
-  .app .canvas {
-    min-height: 280px;
-    width: 75%;
-  }
-  .app .hamburger {
-    display: none;
-  }
-}
-
-/* Card Matcher */
-/* DifficultyMenu Component */
-.difficulty-menu-container {
-  height: 300px;
-}
-
-/* HomePage Component */
-.home-page-container {
-  height: 100%;
-  margin: var(--mobile-header-height) 0 0;
-  color: var(--primary-color);
-}
-
-.home-page-container.dark {
-  background-color: var(--border-primary);
-}
-
-.home-page-container.light {
-  background-color: var(--background-primary);
-}
-
-.home-page-container .title {
-  height: var(--header-height);
-}
-
-.home-page-container .game-container {
-  height: calc(100% - (var(--header-height) + var(--dark-mode-toggle-height)));
-  width: 100%;
-  padding: 0 0 20%;
-  overflow-y: auto;
-  scrollbar-width: none;
-}
-
-.game-container::-webkit-scrollbar {
-  width: 0px; /* Remove scrollbar */
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-
-.game-container .easy {
-  width: 75%;
-}
-
-.game-container .medium {
-  width: 75%;
-}
-
-.game-container .hard {
-  width: 80%;
-}
-
-.game-container .menu {
-  height: 100%;
-}
-
-@media screen and (min-width: 375px) {
-  .home-page-container {
-    margin: var(--desktop-header-height) 0 0;
-  }
-}
-
-@media screen and (min-width: 996px) {
-  .home-page-container .game-container {
-    padding: 0;
   }
 }
 

@@ -22,6 +22,12 @@ let customTheme = createTheme({
       xl: breakpoints.xl,
     },
   },
+  palette: {
+    primary: {
+      main: '#58b2fd',
+      contrastText: '#ffffff',
+    },
+  },
   overrides: {
     MuiTypography: {
       root: {
@@ -108,6 +114,11 @@ let customTheme = createTheme({
           fontSize: '1em',
           lineHeight: '1.5em',
         },
+      },
+    },
+    MuiFab: {
+      root: {
+        fontFamily: "'Roboto', Helvetica, Arial, sans-serif",
       },
     },
   },

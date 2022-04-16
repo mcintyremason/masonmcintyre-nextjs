@@ -1,4 +1,4 @@
-import { Grid, ThemeProvider } from '@material-ui/core'
+import { Grid, Theme, ThemeProvider } from '@material-ui/core'
 import classnames from 'classnames'
 import Head from 'next/head'
 import { ReactNode } from 'react'
@@ -10,9 +10,10 @@ type Props = {
   children?: ReactNode
   title?: string
   dark?: boolean
+  theme?: Theme
 }
 
-const Layout = ({ children, title = 'Mason McIntyre', dark }: Props) => (
+const Layout = ({ children, title = 'Mason McIntyre', dark, theme = customTheme }: Props) => (
   <Grid className={classnames(styles['layout'], dark ? styles['dark'] : '')}>
     <Head>
       <title>{title}</title>
@@ -44,7 +45,7 @@ const Layout = ({ children, title = 'Mason McIntyre', dark }: Props) => (
         href="/css/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
       />
     </Head>
-    <ThemeProvider theme={customTheme}>{children}</ThemeProvider>
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
   </Grid>
 )
 

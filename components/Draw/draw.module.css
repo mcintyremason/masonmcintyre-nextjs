@@ -1,15 +1,11 @@
-.draw-container {
-  height: 100%;
-}
-
 .draw-div {
   display: block;
   height: 100%;
+  padding: 2% 0 0;
 }
 
 .draw-title {
   margin: 0 0 2%;
-  padding: 2% 0;
 }
 
 .title-canvas-container {
@@ -20,11 +16,15 @@
   height: 100%;
 }
 
-.mobile-title-container {
-  padding: 5%;
+.draw-container {
+  height: 100%;
 }
 
 @media only screen and (min-width: 768px) {
+  .draw-container {
+    height: auto;
+  }
+
   .draw-menu-container {
     display: block;
     margin: 0 auto;
@@ -39,8 +39,10 @@
   .title-canvas-container {
     display: block;
   }
+}
 
-  .title-canvas-container {
-    padding: 5% 0 0;
+@media only screen and (min-width: 768px) and (min-height: 799px) {
+  .draw-container {
+    height: 100%;
   }
 }

@@ -1,11 +1,12 @@
 import { FormControl, FormControlLabel, FormGroup, Grid, Switch } from '@material-ui/core'
+import classnames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import ToyStoryDeck from '../../decks/ToyStoryDeck'
 import MainMenu from '../DifficultyMenu'
 import Fireworks from '../Fireworks'
 import Game from '../Game'
 import { MatchCardProps } from '../MatchCard'
-// import "./index.css";
+import styles from './homePage.module.css'
 
 type GameContextType = {
   cards: Array<MatchCardProps>
@@ -62,11 +63,13 @@ const HomePage = () => {
   }, [difficulty])
 
   return (
-    <Grid className={`home-page-container ${isDarkMode ? 'dark' : 'light'}`}>
+    <Grid
+      className={classnames([
+        styles['home-page-container'],
+        isDarkMode ? styles['dark'] : styles['light'],
+      ])}
+    >
       {gameOver && <Fireworks />}
-      {/* <Grid container justifyContent="center" alignItems="center" className="title">
-        <Typography variant="h2">Card Matcher</Typography>
-      </Grid> */}
       <Grid container justifyContent="center" alignItems="center">
         <FormControl component="fieldset">
           <FormGroup aria-label="position" row>
@@ -86,7 +89,7 @@ const HomePage = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className="game-container"
+        className={styles['game-container']}
       >
         <GameContext.Provider
           value={{

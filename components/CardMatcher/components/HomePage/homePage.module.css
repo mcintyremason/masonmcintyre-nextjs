@@ -45,7 +45,7 @@
   height: 100%;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 768px) {
   .home-page-container {
     margin: var(--desktop-header-height) 0 0;
   }

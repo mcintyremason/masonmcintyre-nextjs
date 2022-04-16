@@ -145,7 +145,7 @@ const Game = (props: GameProps) => {
               <MatchCard
                 {...{
                   ...card,
-                  classes: `${difficulty === 0 ? 'large' : difficulty === 1 ? 'medium' : 'small'}`,
+                  difficulty: difficulty,
                   selected: selectedCardFirst === card || selectedCardSecond === card,
                   matched: matchedCards.find((x) => x === card.value) ? true : false,
                 }}

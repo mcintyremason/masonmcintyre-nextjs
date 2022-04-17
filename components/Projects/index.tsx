@@ -23,7 +23,7 @@ const Projects: React.FC<ProjectsProps> = (_: ProjectsProps) => {
           </Link>
         </Typography>
         <Typography variant="h4" className={styles['project']}>
-          <Link href="https://cryptoget.dev">Crypto Get - cryptoget.dev</Link>
+          <Link href="https://cryptototals.com">Crypto Totals</Link>
         </Typography>
         <Typography variant="h4" className={styles['project']}>
           <Link href="/projects/card-matcher/">Card Matcher</Link>

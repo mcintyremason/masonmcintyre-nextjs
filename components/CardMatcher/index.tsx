@@ -1,8 +1,8 @@
-import React from "react";
-import App from "./App";
+import React from 'react'
+import App from './App'
 
-type CardMatcherProps = {};
+type CardMatcherProps = {}
 
-const CardMatcher: React.FC<CardMatcherProps> = () => <App />;
+const CardMatcher: React.FC<CardMatcherProps> = () => <App />
 
-export default CardMatcher;
+export default CardMatcher

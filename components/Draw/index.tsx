@@ -241,7 +241,6 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
             <Canvas
               width={600}
               height={600}
-              className={'draw-canvas'}
               backgroundColor={backgroundColor}
               outlineColor={outlineColor}
               fillColor={fillColor}

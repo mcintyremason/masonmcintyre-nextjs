@@ -18,7 +18,6 @@ type DrawCanvasProps = {
   reDraw: boolean
   reShapes: Array<Shape>
   isLoading: boolean
-  className?: string
   setShapes: (value: Array<Shape>) => void
   setCurrentShape: (value: Shape) => void
   setReDraw: (value: boolean) => void
@@ -43,7 +42,6 @@ const DrawCanvas: React.FC<DrawCanvasProps> = ({
   reDraw,
   reShapes,
   isLoading,
-  className,
   setShapes,
   setCurrentShape,
   setReDraw,

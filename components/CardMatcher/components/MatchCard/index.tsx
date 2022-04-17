@@ -10,7 +10,7 @@ export type MatchCardProps = {
   id: number
   value: string
   order: number
-  difficulty: number
+  difficulty?: number
   selected?: boolean
   matched?: boolean
   imgSrc?: string

@@ -1,0 +1,10 @@
+.senior-project-container {
+  height: calc(100% - (var(--mobile-header-height) + var(--footer-height)));
+  margin: var(--mobile-header-height) 0;
+}
+
+@media screen and (min-width: 768px) {
+  .senior-project-container {
+    height: calc(100% - (var(--desktop-header-height) + var(--footer-height)));
+  }
+}

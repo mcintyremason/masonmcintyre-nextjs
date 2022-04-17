@@ -1,0 +1,22 @@
+.projects {
+  margin: var(--mobile-header-height) 0 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 375px) {
+  .projects .main {
+    min-height: 480px;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .content-section-container {
+    height: calc(100% - (var(--mobile-header-height) + var(--footer-height)));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-section-container {
+    height: calc(100% - (var(--desktop-header-height) + var(--footer-height)));
+  }
+}

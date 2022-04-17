@@ -1,14 +1,15 @@
 .home-page-container {
   height: 100%;
+  margin: var(--mobile-header-height) 0 0;
   color: var(--primary-color);
 }
 
 .home-page-container.dark {
-  background-color: #000000;
+  background-color: var(--border-primary);
 }
 
 .home-page-container.light {
-  background-color: #ffffff;
+  background-color: var(--background-primary);
 }
 
 .home-page-container .title {
@@ -42,6 +43,12 @@
 
 .game-container .menu {
   height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .home-page-container {
+    margin: var(--desktop-header-height) 0 0;
+  }
 }
 
 @media screen and (min-width: 996px) {

@@ -1,0 +1,20 @@
+.senior-project {
+  height: 100%;
+  padding: 5%;
+}
+
+.senior-project .title {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.senior-project-canvas-container {
+  padding: 35px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .senior-project {
+    justify-content: center;
+    padding: 0 0 175px;
+  }
+}

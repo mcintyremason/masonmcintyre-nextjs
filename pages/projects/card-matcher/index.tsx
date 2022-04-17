@@ -1,8 +1,6 @@
-import React from "react";
-
-import Layout from "../../../components/Layout/index";
-import Header from "../../../components/Header";
-import CardMatcher from "../../../components/CardMatcher/index";
+import CardMatcher from '../../../components/CardMatcher'
+import Header from '../../../components/Header'
+import Layout from '../../../components/Layout'
 
 const IndexPage = () => (
   <Layout title="Mason McIntyre">
@@ -11,6 +9,6 @@ const IndexPage = () => (
       <CardMatcher />
     </div>
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage

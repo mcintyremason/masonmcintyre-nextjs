@@ -1,6 +1,6 @@
 header.app-bar {
   min-height: var(--mobile-header-height);
-  padding: 2% 2%;
+  padding: var(--mobile-header-padding);
   background-color: var(--background-secondary);
   color: var(--primary-color);
   transition: min-height 0.5s;

@@ -1,31 +1,29 @@
-import Link from "next/link";
-import React, { useState } from "react";
-import classNames from "classnames";
+import { Typography } from '@material-ui/core'
+import classNames from 'classnames'
+import Link from 'next/link'
+import React, { useState } from 'react'
 
-type HeaderNavProps = {};
+type HeaderNavProps = {}
 
 const HeaderNav: React.FC<HeaderNavProps> = (_: HeaderNavProps) => {
-  const [isHamburgerActive, setIsHamburgerActive] = useState(false);
+  const [isHamburgerActive, setIsHamburgerActive] = useState(false)
 
   const hamburgerOnClick = () => {
-    setIsHamburgerActive(!isHamburgerActive);
-  };
+    setIsHamburgerActive(!isHamburgerActive)
+  }
 
   return (
     <div
       id="header-container"
-      className={classNames(
-        "header-container",
-        isHamburgerActive ? "active" : "",
-      )}
+      className={classNames('header-container', isHamburgerActive ? 'active' : '')}
     >
       <div id="header" className="header">
-        <h1 className="header-name">
+        <Typography variant="h1" className="header-name">
           <a itemProp="name" href="/">
             <span itemProp="givenName">Mason</span>
             <span itemProp="familyName">McIntyre</span>
           </a>
-        </h1>
+        </Typography>
         <div className="header-nav">
           <ul>
             <li>
@@ -44,10 +42,7 @@ const HeaderNav: React.FC<HeaderNavProps> = (_: HeaderNavProps) => {
           </ul>
           <div
             id="hamburger"
-            className={classNames(
-              "hamburger",
-              isHamburgerActive ? "active" : "",
-            )}
+            className={classNames('hamburger', isHamburgerActive ? 'active' : '')}
             onClick={hamburgerOnClick}
           >
             <div></div>
@@ -55,10 +50,7 @@ const HeaderNav: React.FC<HeaderNavProps> = (_: HeaderNavProps) => {
         </div>
         <div
           id="mobile-nav-container"
-          className={classNames(
-            "mobile-nav-container",
-            isHamburgerActive ? "active" : "",
-          )}
+          className={classNames('mobile-nav-container', isHamburgerActive ? 'active' : '')}
         >
           <ul>
             <li>
@@ -80,7 +72,7 @@ const HeaderNav: React.FC<HeaderNavProps> = (_: HeaderNavProps) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeaderNav;
+export default HeaderNav

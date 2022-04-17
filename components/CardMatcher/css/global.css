@@ -1,4 +1,4 @@
-@import "variables.css";
+@import 'variables.css';
 
 html {
   height: 100%;
@@ -23,4 +23,4 @@ h6 {
   color: var(--primary-color);
 }
 
-@import "utilities.css";
+@import 'utilities.css';

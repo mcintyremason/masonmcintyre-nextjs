@@ -1,0 +1,5 @@
+.index {
+  position: relative;
+  height: inherit;
+  overflow-y: scroll;
+}

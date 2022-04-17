@@ -1,0 +1,26 @@
+.projects-container {
+  height: 100%;
+  padding: 20px 10% 0;
+}
+
+.projects-container span {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-bottom: 3px solid;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.projects-container span:hover {
+  color: var(--secondary-color);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.projects-container .project:first-child {
+  margin: 0;
+}
+
+.projects-container .project {
+  margin: 10px 0 0;
+}

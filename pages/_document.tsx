@@ -30,13 +30,13 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156934776-1"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NHMNLRGX9Z"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
-              function gtag() { dataLayer.push(arguments); }
+              function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'UA-156934776-1');`,
+              gtag('config', 'G-NHMNLRGX9Z');`,
             }}
           />
         </body>

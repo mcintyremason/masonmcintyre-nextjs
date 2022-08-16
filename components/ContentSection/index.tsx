@@ -40,15 +40,15 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
           living in Bethlehem, Pennsylvania. I'm a Senior Software Engineer at&nbsp;
           <Link href="https://www.disneystreaming.com/">Disney Streaming Services</Link>. I develop
           & maintain React applications written in TypeScript, REST servers using Scala, architect
-          systems with AWS infrastructure, promote code changes with custom Jenkins pipelines &
-          initiated/lead monthly education sessions that promote collaboration with other team
-          members by showcasing topics they find interesting.
+          systems with AWS infrastructure, promote code changes with custom Jenkins pipelines & lead
+          monthly education sessions that promote collaboration with other team members by
+          showcasing topics they find interesting.
         </Typography>
         <Typography>
           When I'm not in the office, I'm either hanging out with my daughter Jane Mae, my dog Luna,
-          friends & family, or am on some type of adventure! My passions include reading, working
-          out, & traveling; from hiking up mountains (like Mt. Marcy), to exploring foreign cities
-          (such as Berlin).
+          my girlfriend, my friends, my family, or am on some type of adventure! My passions include
+          reading, working out, & traveling; from hiking up mountains (like Mt. Marcy), to exploring
+          foreign cities (such as Berlin).
         </Typography>
         <Typography>
           If you're interested in seeing some of the work I've done over the years, please visit

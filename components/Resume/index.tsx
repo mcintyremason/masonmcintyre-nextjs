@@ -62,7 +62,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
           <Grid className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
-                Lead Software Engineer
+                Tech Lead Software Engineer
               </span>
               ,
               <span itemProp="worksFor">

@@ -36,13 +36,14 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
         className={styles['about-container']}
       >
         <Typography className={styles['about']}>
-          <span id="greeting">Hey there!</span> I'm Mason McIntyre, & I'm a 29 year old currently
-          living in Bethlehem, Pennsylvania. I'm a Senior Software Engineer at&nbsp;
-          <Link href="https://www.disneystreaming.com/">Disney Streaming Services</Link>. I develop
-          & maintain React applications written in TypeScript, REST servers using Scala, architect
-          systems with AWS infrastructure, promote code changes with custom Jenkins pipelines & lead
-          monthly education sessions that promote collaboration with other team members by
-          showcasing topics they find interesting.
+          <span id="greeting">Hey there!</span> I'm Mason McIntyre, & I'm a 30 year old currently
+          living in Bethlehem, Pennsylvania. I'm a Lead Software Engineer at&nbsp;
+          <Link href="https://www.disneystreaming.com/">Disney Streaming Services</Link>. I
+          currently manage a team with five direct reports. I develop & maintain React applications
+          written in TypeScript, REST servers using Scala, architect systems with AWS
+          infrastructure, promote code changes with custom Jenkins pipelines & lead monthly
+          education sessions that promote collaboration with other team members by showcasing topics
+          they find interesting.
         </Typography>
         <Typography>
           When I'm not in the office, I'm either hanging out with my daughter Jane Mae, my dog Luna,

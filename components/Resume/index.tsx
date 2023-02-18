@@ -62,15 +62,30 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
           <Grid className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
-                Software Engineer
+                Lead Software Engineer
               </span>
               ,
               <span itemProp="worksFor">
                 <Link href="https://dmedmedia.disney.com/">Disney Streaming Services</Link>
               </span>
             </Typography>
-            <Typography variant="h5">March 2020 - Present</Typography>
+            <Typography variant="h5">October 2022 - Present</Typography>
+            &nbsp;
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
+                Senior Software Engineer
+              </span>
+            </Typography>
+            <Typography variant="h5">November 2021 - October 2022</Typography>
+            &nbsp;
+            <Typography variant="h4">
+              <span className={styles['job-title']} itemProp="jobTitle">
+                Software Engineer
+              </span>
+            </Typography>
+            <Typography variant="h5">March 2020 - November 2021</Typography>
             <ul>
+              <li>Lead engineer with five direct reports</li>
               <li>
                 Develop & maintain the company’s customer service (CS) tool, using React,
                 TypeScript, & CSS3

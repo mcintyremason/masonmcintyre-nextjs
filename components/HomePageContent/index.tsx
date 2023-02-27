@@ -1,11 +1,11 @@
 import { Grid, Typography } from '@material-ui/core'
 import Link from 'next/link'
 import React from 'react'
-import styles from './contentSection.module.css'
+import styles from './homePageContent.module.css'
 
-type ContentSectionProps = {}
+type HomePageContentProps = {}
 
-const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) => {
+const HomePageContent: React.FC<HomePageContentProps> = (_: HomePageContentProps) => {
   return (
     <Grid container className={styles['content-section-container']}>
       <Grid item xs={12} lg={6} xl={6}>
@@ -46,10 +46,10 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
           they find interesting.
         </Typography>
         <Typography>
-          When I'm not in the office, I'm either hanging out with my daughter Jane Mae, my dog Luna,
-          my girlfriend, my friends, my family, or am on some type of adventure! My passions include
-          reading, working out, & traveling; from hiking up mountains (like Mt. Marcy), to exploring
-          foreign cities (such as Berlin).
+          When I'm not in the office, I'm either hanging out with my fiance, my daughter Jane Mae,
+          my dogs Luna & Link, my friends, my family, or am on some type of adventure! My passions
+          include reading, working out, & traveling; from hiking up mountains (like Mt. Marcy), to
+          exploring foreign cities (such as Berlin).
         </Typography>
         <Typography>
           If you're interested in seeing some of the work I've done over the years, please visit
@@ -64,4 +64,4 @@ const ContentSection: React.FC<ContentSectionProps> = (_: ContentSectionProps) =
   )
 }
 
-export default ContentSection
+export default HomePageContent

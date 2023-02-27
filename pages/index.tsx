@@ -1,7 +1,7 @@
 import { Grid } from '@material-ui/core'
-import ContentSection from '../components/ContentSection'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import ContentSection from '../components/HomePageContent'
 import Layout from '../components/Layout'
 import styles from './index.module.css'
 

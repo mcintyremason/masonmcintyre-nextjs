@@ -14,7 +14,7 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
         justifyContent="flex-end"
         className={styles['downloads-container']}
       >
-        <Link href="/docs/Mason-McIntyre-Resume.pdf">
+        <Link legacyBehavior href="/docs/Mason-McIntyre-Resume.pdf">
           <a>
             <i className="fa fa-download"></i>&nbsp;Download
           </a>

@@ -21,35 +21,35 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
         />
         <Grid container className={classNames(styles['footer-icons'], styles['menu'])}>
           <h4 itemProp="email" className={styles['footer-email']}>
-            <Link href="mailto:mason@masonmcintyre.com">
+            <Link legacyBehavior href="mailto:mason@masonmcintyre.com">
               <a aria-label="email">
                 <i className="fa fa-envelope-o" aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="telephone" className={styles['footer-phone']}>
-            <Link href="tel:6104289142">
+            <Link legacyBehavior href="tel:6104289142">
               <a aria-label="telephone">
                 <i className={'fa fa-phone'} aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
-            <Link href="skype:o0xpopeyex0o">
+            <Link legacyBehavior href="skype:o0xpopeyex0o">
               <a aria-label="skype">
                 <i className={'fa fa-skype'} aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
-            <Link href="https://www.linkedin.com/in/mason-mcintyre-a68ab1b2">
+            <Link legacyBehavior href="https://www.linkedin.com/in/mason-mcintyre-a68ab1b2">
               <a aria-label="LinkedIn">
                 <i className={'fa fa-linkedin'} aria-hidden="true"></i>
               </a>
             </Link>
           </h4>
           <h4 itemProp="sameAs">
-            <Link href="https://github.com/mcintyremason">
+            <Link legacyBehavior href="https://github.com/mcintyremason">
               <a aria-label="GitHub">
                 <i className={'fa fa-github'} aria-hidden="true"></i>
               </a>

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 
-import { Grid } from '@material-ui/core'
-
+import { Grid2 } from '@mui/material'
 import { GameContext } from '../HomePage'
 import MatchCard, { MatchCardProps } from '../MatchCard'
 import Win from '../Win'
@@ -130,16 +129,17 @@ const Game = (props: GameProps) => {
   return gameOver ? (
     <Win isDark={isDarkMode} />
   ) : (
-    <Grid>
-      <Grid container>
+    <Grid2>
+      <Grid2 container>
         {cards
           .sort((a, b) => a.order - b.order)
           .map((card) => (
-            <Grid
-              item
-              xs={6}
-              sm={difficulty === 0 ? 6 : difficulty === 1 ? 3 : 4}
-              md={difficulty < 2 ? 3 : 2}
+            <Grid2
+              size={{
+                xs: 6,
+                sm: difficulty === 0 ? 6 : difficulty === 1 ? 3 : 4,
+                md: difficulty < 2 ? 3 : 2,
+              }}
               key={card.id}
             >
               <MatchCard
@@ -151,10 +151,10 @@ const Game = (props: GameProps) => {
                 }}
                 onClick={() => !isMatched(card) && selectMatchCard({ card })}
               />
-            </Grid>
+            </Grid2>
           ))}
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   )
 }
 

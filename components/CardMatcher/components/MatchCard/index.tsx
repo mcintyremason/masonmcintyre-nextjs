@@ -1,4 +1,4 @@
-import { Card, CardMedia, Grid } from '@material-ui/core'
+import { Card, CardMedia, Grid2 } from '@mui/material'
 import classNames from 'classnames'
 import * as React from 'react'
 import styles from './matchCard.module.css'
@@ -20,9 +20,10 @@ export type MatchCardProps = {
 const MatchCard = (props: MatchCardProps) => {
   const { isDarkMode } = React.useContext(GameContext)
   const { difficulty, imgSrc, matched, onClick, selected } = props
+  const cardFrontImg = '/img/card-matcher/card-background.jpg'
 
   return (
-    <Grid container justifyContent="center" className={styles['match-card-container']}>
+    <Grid2 container justifyContent="center" className={styles['match-card-container']}>
       <Card
         className={classNames(
           styles['match-card'],
@@ -36,10 +37,10 @@ const MatchCard = (props: MatchCardProps) => {
         {props.selected || props.matched ? (
           <CardMedia className={styles['back']} image={imgSrc} />
         ) : (
-          <CardMedia className={styles['front']} image={'/img/card-matcher/card-background.jpg'} />
+          <CardMedia className={styles['front']} image={cardFrontImg} />
         )}
       </Card>
-    </Grid>
+    </Grid2>
   )
 }
 

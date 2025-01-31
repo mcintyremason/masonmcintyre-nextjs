@@ -1,6 +1,6 @@
 import styles from './projects.module.css'
 
-import { Grid, Typography } from '@material-ui/core'
+import { Grid2, Typography } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 
@@ -8,8 +8,8 @@ type ProjectsProps = {}
 
 const Projects: React.FC<ProjectsProps> = (_: ProjectsProps) => {
   return (
-    <Grid container justifyContent="center" className={styles['projects-container']}>
-      <Grid
+    <Grid2 container justifyContent="center" className={styles['projects-container']}>
+      <Grid2
         container
         direction="column"
         justifyContent="center"
@@ -34,8 +34,8 @@ const Projects: React.FC<ProjectsProps> = (_: ProjectsProps) => {
         <Typography variant="h4" className={styles['project']}>
           <Link href="/projects/draw">Draw</Link>
         </Typography>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   )
 }
 

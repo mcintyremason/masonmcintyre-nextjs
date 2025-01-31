@@ -1,4 +1,4 @@
-import { AppBar, Grid, Link, Typography } from '@material-ui/core'
+import { AppBar, Grid2, Link, Typography } from '@mui/material'
 import classNames from 'classnames'
 import React, { useState } from 'react'
 import HamburgerNav from '../HamburgerNav'
@@ -15,48 +15,47 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
 
   return (
     <AppBar position="fixed" className={styles['app-bar']}>
-      <Grid container direction="column" justifyContent="center">
-        <Grid container className={styles['header']}>
-          <Grid container item xs={10} sm={6} direction="column" justifyContent="center">
+      <Grid2 container direction="column" justifyContent="center">
+        <Grid2 container className={styles['header']}>
+          <Grid2 container size={{ xs: 10, sm: 6 }} direction="column" justifyContent="center">
             <Typography variant="h1" itemProp="name" className={styles['header-name']}>
               <Link className={styles['name']} href="/">
                 <span itemProp="givenName">Mason </span>
                 <span itemProp="familyName">McIntyre</span>
               </Link>
             </Typography>
-          </Grid>
-          <Grid item xs={2} sm={6} className={styles['hamburger-nav-container']}>
+          </Grid2>
+          <Grid2 size={{ xs: 2, sm: 6 }} className={styles['hamburger-nav-container']}>
             <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
-          </Grid>
-          <Grid
+          </Grid2>
+          <Grid2
             container
             justifyContent="center"
-            item
-            xs={12}
+            size={{ xs: 12 }}
             className={classNames(styles['menu-container'], hambugerActive ? styles['active'] : '')}
           >
-            <Grid
+            <Grid2
               className={styles['menu']}
               container
               justifyContent="center"
               direction="row"
               wrap="nowrap"
             >
-              <Grid className={styles['menu-link-container']}>
+              <Grid2 className={styles['menu-link-container']}>
                 <Link className={styles['menu-link']} href="/resume">
                   Resume
                 </Link>
-              </Grid>
-              <Grid className={styles['menu-link-divider']}>|</Grid>
-              <Grid className={styles['menu-link-container']}>
+              </Grid2>
+              <Grid2 className={styles['menu-link-divider']}>|</Grid2>
+              <Grid2 className={styles['menu-link-container']}>
                 <Link className={styles['menu-link']} href="/projects">
                   Projects
                 </Link>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+        </Grid2>
+      </Grid2>
     </AppBar>
   )
 }

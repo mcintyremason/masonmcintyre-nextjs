@@ -3,10 +3,10 @@ const Fireworks = () => (
     <div className="before"></div>
     <div className="after"></div>
   </div>
-  // <Grid className={styles['pyro']}>
-  //   <Grid className={styles['before']}></Grid>
-  //   <Grid className={styles['after']}></Grid>
-  // </Grid>
+  // <Grid2 className={styles['pyro']}>
+  //   <Grid2 className={styles['before']}></Grid2>
+  //   <Grid2 className={styles['after']}></Grid2>
+  // </Grid2>
 )
 
 export default Fireworks

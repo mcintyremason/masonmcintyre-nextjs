@@ -1,4 +1,4 @@
-import { Grid, Theme, ThemeProvider } from '@material-ui/core'
+import { Grid2, Theme, ThemeProvider } from '@mui/material'
 import classnames from 'classnames'
 import Head from 'next/head'
 import { ReactNode } from 'react'
@@ -14,7 +14,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'Mason McIntyre', dark, theme = customTheme }: Props) => (
-  <Grid className={classnames(styles['layout'], dark ? styles['dark'] : '')}>
+  <Grid2 className={classnames(styles['layout'], dark ? styles['dark'] : '')}>
     <Head>
       <title>{title}</title>
       <PersonJsonLd />
@@ -46,7 +46,7 @@ const Layout = ({ children, title = 'Mason McIntyre', dark, theme = customTheme 
       />
     </Head>
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
-  </Grid>
+  </Grid2>
 )
 
 export default Layout

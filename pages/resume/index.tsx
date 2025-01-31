@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid2 } from '@mui/material'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import Layout from '../../components/Layout'
@@ -7,11 +7,11 @@ import styles from './index.module.css'
 
 const ResumePage = () => (
   <Layout title="Mason McIntyre">
-    <Grid className={styles['resume']} itemScope itemType="http://schema.org/Person">
+    <Grid2 className={styles['resume']} itemScope itemType="http://schema.org/Person">
       <Header />
       <Resume />
       <Footer />
-    </Grid>
+    </Grid2>
   </Layout>
 )
 

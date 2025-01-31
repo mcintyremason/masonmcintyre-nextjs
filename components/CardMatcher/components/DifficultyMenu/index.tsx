@@ -1,4 +1,4 @@
-import { Fab, Grid } from '@material-ui/core'
+import { Fab, Grid2 } from '@mui/material'
 import { useContext } from 'react'
 import { GameContext } from '../HomePage'
 
@@ -13,7 +13,7 @@ const MainMenu = () => {
   }
 
   return (
-    <Grid
+    <Grid2
       container
       direction="column"
       justifyContent="space-evenly"
@@ -29,7 +29,7 @@ const MainMenu = () => {
       <Fab variant="extended" color="primary" aria-label="add" onClick={() => selectMenuOption(2)}>
         Hard
       </Fab>
-    </Grid>
+    </Grid2>
   )
 }
 

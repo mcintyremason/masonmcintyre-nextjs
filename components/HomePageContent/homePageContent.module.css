@@ -35,22 +35,16 @@
   }
 }
 
-@media screen and (min-width: 660px) {
-  .content-section-container {
-    height: calc(100% - (var(--mobile-header-height) + var(--footer-height)));
-  }
-}
-
 @media screen and (min-width: 768px) {
   .content-section-container {
     margin: var(--desktop-header-height) 0 0;
-    height: calc(100% - (var(--desktop-header-height) + var(--footer-height)));
   }
 }
 
 @media screen and (min-width: 996px) {
   .content-section-container {
     padding: 24px 10%;
+    height: calc(100% - (var(--desktop-header-height) + var(--footer-height)));
   }
   .content-section-container .about-container {
     padding: 0;

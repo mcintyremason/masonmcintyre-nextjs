@@ -1,4 +1,4 @@
-import { FormControl, FormControlLabel, FormGroup, Grid, Switch } from '@material-ui/core'
+import { FormControl, FormControlLabel, FormGroup, Grid2, Switch } from '@mui/material'
 import classnames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import ToyStoryDeck from '../../decks/ToyStoryDeck'
@@ -63,14 +63,14 @@ const HomePage = () => {
   }, [difficulty])
 
   return (
-    <Grid
+    <Grid2
       className={classnames([
         styles['home-page-container'],
         isDarkMode ? styles['dark'] : styles['light'],
       ])}
     >
       {gameOver && <Fireworks />}
-      <Grid container justifyContent="center" alignItems="center">
+      <Grid2 container justifyContent="center" alignItems="center">
         <FormControl component="fieldset">
           <FormGroup aria-label="position" row>
             <FormControlLabel
@@ -83,8 +83,8 @@ const HomePage = () => {
             />
           </FormGroup>
         </FormControl>
-      </Grid>
-      <Grid
+      </Grid2>
+      <Grid2
         container
         direction="row"
         justifyContent="center"
@@ -115,8 +115,8 @@ const HomePage = () => {
             <MainMenu />
           )}
         </GameContext.Provider>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   )
 }
 export default HomePage

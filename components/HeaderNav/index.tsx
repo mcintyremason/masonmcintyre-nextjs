@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core'
+import { Typography } from '@mui/material'
 import classNames from 'classnames'
 import Link from 'next/link'
 import React, { useState } from 'react'

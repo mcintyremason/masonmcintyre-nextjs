@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid2 } from '@mui/material'
 import classNames from 'classnames'
 import Link from 'next/link'
 import React from 'react'
@@ -12,14 +12,14 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
   const { isAbsolute } = props
 
   return (
-    <Grid className={classNames(styles['footer-container'], isAbsolute ? styles['absolute'] : '')}>
-      <Grid id="footer" className={classNames(styles['footer'])}>
+    <Grid2 className={classNames(styles['footer-container'], isAbsolute ? styles['absolute'] : '')}>
+      <Grid2 id="footer" className={classNames(styles['footer'])}>
         <meta itemProp="sameAs" content="http://www.gowilkesu.com/roster.aspx?rp_id=4947" />
         <meta
           itemProp="sameAs"
           content="http://www.huskers.com/ViewArticle.dbml?DB_OEM_ID=100&ATCLID=205267310"
         />
-        <Grid container className={classNames(styles['footer-icons'], styles['menu'])}>
+        <Grid2 container className={classNames(styles['footer-icons'], styles['menu'])}>
           <h4 itemProp="email" className={styles['footer-email']}>
             <Link legacyBehavior href="mailto:mason@masonmcintyre.com">
               <a aria-label="email">
@@ -55,9 +55,9 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
               </a>
             </Link>
           </h4>
-        </Grid>
-      </Grid>
-    </Grid>
+        </Grid2>
+      </Grid2>
+    </Grid2>
   )
 }
 

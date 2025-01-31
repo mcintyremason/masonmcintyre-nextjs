@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core'
+import { Grid2, Typography } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import styles from './resume.module.css'
@@ -7,8 +7,8 @@ type ResumeProps = {}
 
 const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
   return (
-    <Grid container direction="column" className={styles['resume-container']}>
-      <Grid
+    <Grid2 container direction="column" className={styles['resume-container']}>
+      <Grid2
         id="downloads-container"
         container
         justifyContent="flex-end"
@@ -19,21 +19,25 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
             <i className="fa fa-download"></i>&nbsp;Download
           </a>
         </Link>
-      </Grid>
-      <Grid
+      </Grid2>
+      <Grid2
         id="education-container"
         container
         justifyContent="space-between"
         className={styles['education-container']}
       >
-        <Grid item xs={12} md={3} lg={3}>
-          <Grid container justifyContent="flex-start" className={styles['section-title-container']}>
+        <Grid2 size={{ xs: 12, md: 3, lg: 3 }}>
+          <Grid2
+            container
+            justifyContent="flex-start"
+            className={styles['section-title-container']}
+          >
             <Typography variant="h2" className={styles['education-title']}>
               Education
             </Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={8} lg={9} className={styles['education']}>
+          </Grid2>
+        </Grid2>
+        <Grid2 size={{ xs: 12, md: 8, lg: 9 }} className={styles['education']}>
           <Typography variant="h4">
             B.S, Computer Science -
             <span itemProp="alumniOf">
@@ -43,23 +47,27 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
             </span>
             - 2015
           </Typography>
-        </Grid>
-      </Grid>
-      <Grid
+        </Grid2>
+      </Grid2>
+      <Grid2
         id="experiences-container"
         container
         justifyContent="space-between"
         className={styles['experiences-container']}
       >
-        <Grid item xs={12} md={3} lg={3}>
-          <Grid container justifyContent="flex-start" className={styles['section-title-container']}>
+        <Grid2 size={{ xs: 12, md: 3, lg: 3 }}>
+          <Grid2
+            container
+            justifyContent="flex-start"
+            className={styles['section-title-container']}
+          >
             <Typography variant="h2" className={styles['experiences-title']}>
               Experience
             </Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={8} lg={9} className={styles['experiences']}>
-          <Grid className={styles['experience']}>
+          </Grid2>
+        </Grid2>
+        <Grid2 size={{ xs: 12, md: 8, lg: 9 }} className={styles['experiences']}>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
                 Tech Lead Software Engineer
@@ -105,14 +113,14 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 collaboration
               </li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} xl={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8, xl: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>Scala</li>
@@ -120,8 +128,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Cypress</li>
                     <li className={styles['tech']}>Jenkins</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>React</li>
                     <li className={styles['tech']}>Play Framework</li>
@@ -129,11 +137,11 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Docker</li>
                     <li className={styles['tech']}>Node.js</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
@@ -148,27 +156,27 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               <li>Worked on the Harbortouch project</li>
               <li>Helped maintain an app written in Ember.js</li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Ember.js</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
@@ -193,14 +201,14 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 code base.
               </li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                     <li className={styles['tech']}>Node.js</li>
@@ -210,8 +218,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>SCSS/CSS</li>
                     <li className={styles['tech']}>HTML</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>React</li>
@@ -220,11 +228,11 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Bull Queue</li>
                     <li className={styles['tech']}>Git</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
@@ -242,14 +250,14 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               <li>Implemented message queuing using Redis & Socket.io for push to front-end</li>
               <li>Responsible for server operations & code promotion</li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES5/6)</li>
                     <li className={styles['tech']}>Node.js</li>
@@ -258,8 +266,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Git</li>
                     <li className={styles['tech']}>HTML</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>TypeScript</li>
                     <li className={styles['tech']}>RethinkDB</li>
@@ -268,11 +276,11 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Linux/BASH</li>
                     <li className={styles['tech']}>SCSS/CSS</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
                 Software Engineer
@@ -316,14 +324,14 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 on various sites.
               </li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES6)</li>
                     <li className={styles['tech']}>Gulp</li>
@@ -331,8 +339,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Git</li>
                     <li className={styles['tech']}>HTML</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Node.js</li>
                     <li className={styles['tech']}>REST</li>
@@ -340,11 +348,11 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>PowerShell</li>
                     <li className={styles['tech']}>CSS</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               <span className={styles['job-title']} itemProp="jobTitle">
                 Web Developer
@@ -370,14 +378,14 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 environment using Linux virtual machines.
               </li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript (ES6)</li>
                     <li className={styles['tech']}>AngularJS 1.0</li>
@@ -389,8 +397,8 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>MySQL</li>
                     <li className={styles['tech']}>Wordpress</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>Node.js</li>
                     <li className={styles['tech']}>HTML</li>
@@ -402,11 +410,11 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                     <li className={styles['tech']}>Umbraco</li>
                     <li className={styles['tech']}>Sitecore</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               Software Development Intern,
               <Link href="http://www.baseballinfosolutions.com">BaseballInfoSolutions</Link>
@@ -426,30 +434,30 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 server-side Ruby programs & parsed output to an interactive user interface.
               </li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>HTML</li>
                     <li className={styles['tech']}>Microsoft SQL Server</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>ASP.NET</li>
                     <li className={styles['tech']}>CSS</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">
               Software Development Intern,
               <Link href="http://www.trailkam.com">TrailKam.com</Link>
@@ -462,60 +470,60 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
               </li>
               <li>Presented work at the Eastern Colleges Science Conference in Niagara, NY.</li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>HTML</li>
                     <li className={styles['tech']}>Microsoft SQL Server</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>PHP</li>
                     <li className={styles['tech']}>CSS</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">Software Development Intern, BrainRush.com</Typography>
             <Typography variant="h5">May 2014 - November 2014</Typography>
             <ul>
               <li>Created static FAQ page using PHP, JavaScript, & CSS.</li>
               <li>Tested & tracked project software issues using JIRA like software.</li>
             </ul>
-            <Grid container justifyContent="space-between" className={styles['techs-container']}>
-              <Grid item xs={12} lg={3} xl={4}>
+            <Grid2 container justifyContent="space-between" className={styles['techs-container']}>
+              <Grid2 size={{ xs: 12, lg: 3, xl: 4 }}>
                 <Typography variant="h5" className={styles['techs-title']}>
                   Technologies Used:
                 </Typography>
-              </Grid>
-              <Grid container item xs={12} lg={8} className={styles['techs']}>
-                <Grid item xs={6} xl={5}>
+              </Grid2>
+              <Grid2 container size={{ xs: 12, lg: 8 }} className={styles['techs']}>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-one']}>
                     <li className={styles['tech']}>JavaScript</li>
                     <li className={styles['tech']}>Symfony 2</li>
                     <li className={styles['tech']}>CSS</li>
                   </ul>
-                </Grid>
-                <Grid item xs={6} xl={5}>
+                </Grid2>
+                <Grid2 size={{ xs: 6, xl: 5 }}>
                   <ul className={styles['techs-two']}>
                     <li className={styles['tech']}>PHP</li>
                     <li className={styles['tech']}>HTML</li>
                   </ul>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid className={styles['experience']}>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+          <Grid2 className={styles['experience']}>
             <Typography variant="h4">Support Technician, Easton Area High School</Typography>
             <Typography variant="h5">May 2014 - September 2014</Typography>
             <ul>
@@ -523,22 +531,22 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 Computer maintenance; including administration, imaging, troubleshooting, & repairs.
               </li>
             </ul>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid
+          </Grid2>
+        </Grid2>
+      </Grid2>
+      <Grid2
         id="misc-container"
         container
         justifyContent="space-between"
         className={styles['misc-container']}
       >
-        <Grid item xs={12} md={3} lg={3} className={styles['section-title-container']}>
+        <Grid2 size={{ xs: 12, md: 3, lg: 3 }} className={styles['section-title-container']}>
           <Typography variant="h2" className={styles['misc-title']}>
             Misc.
           </Typography>
-        </Grid>
-        <Grid item xs={12} md={8} lg={9}>
-          <Grid container className={styles['misc']}>
+        </Grid2>
+        <Grid2 size={{ xs: 12, md: 8, lg: 9 }}>
+          <Grid2 container className={styles['misc']}>
             <ul>
               <li>Wrote first program on an Apple //e in eighth grade</li>
               <li itemProp="award">All-American Wrestler</li>
@@ -549,10 +557,10 @@ const Resume: React.FC<ResumeProps> = (_: ResumeProps) => {
                 2011 PIAA AAAA District Champion Football Team, First Team Varsity Athlete
               </li>
             </ul>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Grid>
+          </Grid2>
+        </Grid2>
+      </Grid2>
+    </Grid2>
   )
 }
 

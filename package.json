@@ -10,8 +10,12 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.2",
-    "@material-ui/icons": "^4.9.1",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.2",
+    "@mui/material": "^6.4.2",
+    "@mui/material-nextjs": "^6.4.2",
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
     "next": "^14.2.15",

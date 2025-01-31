@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid2 } from '@mui/material'
 import styles from './index.module.css'
 
 import Draw from '../../../components/Draw'
@@ -8,11 +8,11 @@ import Layout from '../../../components/Layout'
 
 const DrawPage = () => (
   <Layout title="Mason McIntyre">
-    <Grid className={styles['draw']} itemScope itemType="http://schema.org/Person">
+    <Grid2 className={styles['draw']} itemScope itemType="http://schema.org/Person">
       <Header />
       <Draw />
       <Footer />
-    </Grid>
+    </Grid2>
   </Layout>
 )
 

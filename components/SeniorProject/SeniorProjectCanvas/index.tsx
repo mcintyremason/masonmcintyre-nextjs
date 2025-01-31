@@ -1,6 +1,6 @@
 import styles from './senior-project-canvas.module.css'
 
-import { Grid } from '@material-ui/core'
+import { Grid2 } from '@mui/material'
 import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import Canvas from '../../Canvas'
@@ -166,7 +166,7 @@ const SeniorProjectCanvas: React.FC<SeniorProjectCanvas> = (_: SeniorProjectCanv
   }, [player])
 
   return (
-    <Grid className={styles['canvas-ontainer']}>
+    <Grid2 className={styles['canvas-ontainer']}>
       <Canvas
         className={classNames(styles['canvas'])}
         draw={draw}
@@ -174,7 +174,7 @@ const SeniorProjectCanvas: React.FC<SeniorProjectCanvas> = (_: SeniorProjectCanv
         setReDraw={setReDraw}
         onClick={canvasOnClick}
       />
-    </Grid>
+    </Grid2>
   )
 }
 

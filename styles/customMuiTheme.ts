@@ -1,10 +1,9 @@
-import { createTheme } from '@material-ui/core/styles'
-import { BreakpointValues } from '@material-ui/core/styles/createBreakpoints'
+import { createTheme } from '@mui/material/styles'
 
 // This file IS for globally applied styling across a specific Material-UI component.
 // Instructions on overriding Material-UI component styling, https://material-ui.com/customization/globals/#css.
 
-const breakpoints: BreakpointValues = {
+const breakpoints = {
   xs: 375,
   sm: 660,
   md: 768,
@@ -28,97 +27,109 @@ let customTheme = createTheme({
       contrastText: '#ffffff',
     },
   },
-  overrides: {
+  components: {
     MuiTypography: {
-      root: {
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-      },
-      h1: {
-        margin: 0,
-        color: 'var(--background-secondary)',
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-        fontSize: '1.75em',
-        fontWeight: 'bold',
-        lineHeight: 'normal',
-        letterSpacing: 'normal',
-        [`@media (min-width:${breakpoints.md}px)`]: {
-          fontSize: '2.5em',
+      styleOverrides: {
+        root: {
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
         },
-      },
-      h2: {
-        margin: 0,
-        color: 'var(--background-secondary)',
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-        fontSize: '1.5em',
-        fontWeight: 'bold',
-        lineHeight: 'normal',
-        letterSpacing: 'normal',
-        [`@media (min-width:${breakpoints.md}px)`]: {
-          fontSize: '2em',
+        h1: {
+          margin: 0,
+          color: 'var(--background-secondary)',
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          fontSize: '1.75em',
+          fontWeight: 'bold',
+          lineHeight: 'normal',
+          letterSpacing: 'normal',
+          [`@media (min-width:${breakpoints.md}px)`]: {
+            fontSize: '2.5em',
+          },
         },
-      },
-      h3: {
-        margin: 0,
-        color: 'var(--background-secondary)',
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-        fontSize: '1.25em',
-        fontWeight: 'bold',
-        lineHeight: 'normal',
-        letterSpacing: 'normal',
-        [`@media (min-width:${breakpoints.md}px)`]: {
+        h2: {
+          margin: 0,
+          color: 'var(--background-secondary)',
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
           fontSize: '1.5em',
+          fontWeight: 'bold',
+          lineHeight: 'normal',
+          letterSpacing: 'normal',
+          [`@media (min-width:${breakpoints.md}px)`]: {
+            fontSize: '2em',
+          },
         },
-      },
-      h4: {
-        margin: 0,
-        color: 'var(--background-secondary)',
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-        fontSize: '1em',
-        fontWeight: 'bold',
-        lineHeight: 'normal',
-        letterSpacing: 'normal',
-        [`@media (min-width:${breakpoints.md}px)`]: {
+        h3: {
+          margin: 0,
+          color: 'var(--background-secondary)',
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
           fontSize: '1.25em',
+          fontWeight: 'bold',
+          lineHeight: 'normal',
+          letterSpacing: 'normal',
+          [`@media (min-width:${breakpoints.md}px)`]: {
+            fontSize: '1.5em',
+          },
         },
-      },
-      h5: {
-        margin: 0,
-        color: 'var(--background-secondary)',
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-        fontSize: '0.9em',
-        fontWeight: 'bold',
-        lineHeight: 'normal',
-        letterSpacing: 'normal',
-        [`@media (min-width:${breakpoints.md}px)`]: {
+        h4: {
+          margin: 0,
+          color: 'var(--background-secondary)',
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
           fontSize: '1em',
+          fontWeight: 'bold',
+          lineHeight: 'normal',
+          letterSpacing: 'normal',
+          [`@media (min-width:${breakpoints.md}px)`]: {
+            fontSize: '1.25em',
+          },
         },
-      },
-      h6: {
-        margin: 0,
-        color: 'var(--background-secondary)',
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-        fontSize: '0.8em',
-        fontWeight: 'bold',
-        lineHeight: 'normal',
-        letterSpacing: 'normal',
-        [`@media (min-width:${breakpoints.md}px)`]: {
-          fontSize: '0.75em',
+        h5: {
+          margin: 0,
+          color: 'var(--background-secondary)',
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          fontSize: '0.9em',
+          fontWeight: 'bold',
+          lineHeight: 'normal',
+          letterSpacing: 'normal',
+          [`@media (min-width:${breakpoints.md}px)`]: {
+            fontSize: '1em',
+          },
         },
-      },
-      body1: {
-        margin: 0,
-        fontFamily: "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-        fontSize: '0.9em',
-        lineHeight: '1.4em',
-        [`@media (min-width:${breakpoints.md}px)`]: {
-          fontSize: '1em',
-          lineHeight: '1.5em',
+        h6: {
+          margin: 0,
+          color: 'var(--background-secondary)',
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          fontSize: '0.8em',
+          fontWeight: 'bold',
+          lineHeight: 'normal',
+          letterSpacing: 'normal',
+          [`@media (min-width:${breakpoints.md}px)`]: {
+            fontSize: '0.75em',
+          },
+        },
+        body1: {
+          margin: 0,
+          fontFamily:
+            "'San Frediano', 'BloggerSans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+          fontSize: '0.9em',
+          lineHeight: '1.4em',
+          [`@media (min-width:${breakpoints.md}px)`]: {
+            fontSize: '1em',
+            lineHeight: '1.5em',
+          },
         },
       },
     },
     MuiFab: {
-      root: {
-        fontFamily: "'Roboto', Helvetica, Arial, sans-serif",
+      styleOverrides: {
+        root: {
+          fontFamily: "'Roboto', Helvetica, Arial, sans-serif",
+        },
       },
     },
   },

@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core'
+import { Grid2, Typography } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import styles from './homePageContent.module.css'
@@ -7,37 +7,44 @@ type HomePageContentProps = {}
 
 const HomePageContent: React.FC<HomePageContentProps> = (_: HomePageContentProps) => {
   return (
-    <Grid container className={styles['content-section-container']}>
-      <Grid item xs={12} lg={6} xl={6}>
-        <Grid
+    <Grid2 container className={styles['content-section-container']}>
+      <Grid2
+        size={{
+          xs: 12,
+          lg: 6,
+          xl: 6,
+        }}
+      >
+        <Grid2
           container
           direction="column"
           justifyContent="center"
           className={styles['img-container']}
         >
-          <Grid container justifyContent="center">
+          <Grid2 container justifyContent="center">
             <img
               src="/img/20160720_Mt-Marcy-Stream-View_468x624.webp"
               alt="Mt. Marcy"
               width="262"
               height="350"
             />
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        lg={6}
-        xl={5}
+          </Grid2>
+        </Grid2>
+      </Grid2>
+      <Grid2
+        size={{
+          xs: 12,
+          lg: 6,
+          xl: 5,
+        }}
         container
         direction="column"
         justifyContent="flex-start"
         className={styles['about-container']}
       >
         <Typography className={styles['about']}>
-          <span id="greeting">Hey there!</span> I'm Mason McIntyre, & I'm a 32 year old currently
-          living in Bethlehem, Pennsylvania. I'm a Lead Software Engineer at&nbsp;
+          <span id="greeting">Hey!</span> I'm Mason McIntyre, & I'm a 32 year old currently living
+          in Bethlehem, Pennsylvania. I'm a Lead Software Engineer at&nbsp;
           <Link href="https://www.disneystreaming.com/">Disney Streaming Services</Link>. I
           currently develop & maintain Next.js React applications written in TypeScript, REST
           servers using Node.js, architect systems with AWS infrastructure, promote code changes
@@ -58,8 +65,8 @@ const HomePageContent: React.FC<HomePageContentProps> = (_: HomePageContentProps
           </a>
           &nbsp;page!
         </Typography>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   )
 }
 

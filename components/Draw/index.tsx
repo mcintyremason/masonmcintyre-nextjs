@@ -1,6 +1,6 @@
 import styles from './draw.module.css'
 
-import { Grid, Typography } from '@material-ui/core'
+import { Grid2, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import Canvas from './DrawCanvas'
 import Shape from './Shape'
@@ -128,19 +128,19 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
   // };
 
   return (
-    <Grid className={styles['draw-container']}>
-      <Grid className={styles['draw-div']}>
-        <Grid className={styles['draw-menu-container']}>
-          <Grid className={styles['mobile-title-container']}>
+    <Grid2 className={styles['draw-container']}>
+      <Grid2 className={styles['draw-div']}>
+        <Grid2 className={styles['draw-menu-container']}>
+          <Grid2 className={styles['mobile-title-container']}>
             <Typography variant="h1">
               Available only on desktop. Please open on screen wider that 768 pixels.
             </Typography>
-          </Grid>
-          <Grid className={styles['title-canvas-container']}>
+          </Grid2>
+          <Grid2 className={styles['title-canvas-container']}>
             <Typography variant="h1" className={styles['draw-title']}>
               Draw
             </Typography>
-            <Grid>
+            <Grid2>
               <select
                 name="shapes"
                 value={selectedShapeType}
@@ -170,8 +170,8 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
             <button type="button" id="load" onClick={load}>
               Load
             </button> */}
-            </Grid>
-            <Grid>
+            </Grid2>
+            <Grid2>
               Outline
               <input
                 type="checkbox"
@@ -206,8 +206,8 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
               >
                 Backward
               </button>
-            </Grid>
-            <Grid>
+            </Grid2>
+            <Grid2>
               Background
               <input
                 type="color"
@@ -235,9 +235,9 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
                   setFillColor(event.target.value)
                 }}
               />
-            </Grid>
-          </Grid>
-          <Grid>
+            </Grid2>
+          </Grid2>
+          <Grid2>
             <Canvas
               width={600}
               height={600}
@@ -261,10 +261,10 @@ const Draw: React.FC<DrawProps> = (_: DrawProps) => {
               setIsRedoDisabled={setIsRedoDisabled}
               setIsLoading={setIsLoading}
             />
-          </Grid>
-        </Grid>
-      </Grid>
-    </Grid>
+          </Grid2>
+        </Grid2>
+      </Grid2>
+    </Grid2>
   )
 }
 

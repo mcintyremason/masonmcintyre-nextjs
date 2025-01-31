@@ -45,7 +45,7 @@ const HomePageContent: React.FC<HomePageContentProps> = (_: HomePageContentProps
         <Typography className={styles['about']}>
           <span id="greeting">Hey!</span> I'm Mason McIntyre, & I'm a 32 year old currently living
           in Bethlehem, Pennsylvania. I'm a Lead Software Engineer at&nbsp;
-          <Link href="https://www.disneystreaming.com/">Disney Streaming Services</Link>. I
+          <Link href="https://en.wikipedia.org/wiki/Disney_Streaming">Disney Streaming</Link>. I
           currently develop & maintain Next.js React applications written in TypeScript, REST
           servers using Node.js, architect systems with AWS infrastructure, promote code changes
           with custom Jenkins pipelines & lead monthly education sessions that promote collaboration
